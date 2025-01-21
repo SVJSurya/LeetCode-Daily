@@ -9,6 +9,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0407-trapping-rain-water-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0407-trapping-rain-water-ii) |
 | [1022-unique-paths-iii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1022-unique-paths-iii) |
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
+| [2145-grid-game](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2145-grid-game) |
 | [2685-first-completely-painted-row-or-column](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2685-first-completely-painted-row-or-column) |
 ## Backtracking
 |  |
@@ -24,6 +25,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0407-trapping-rain-water-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0407-trapping-rain-water-ii) |
 | [1022-unique-paths-iii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1022-unique-paths-iii) |
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
+| [2145-grid-game](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2145-grid-game) |
 | [2685-first-completely-painted-row-or-column](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2685-first-completely-painted-row-or-column) |
 ## Breadth-First Search
 |  |
@@ -47,4 +49,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [2685-first-completely-painted-row-or-column](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2685-first-completely-painted-row-or-column) |
+## Prefix Sum
+|  |
+| ------- |
+| [2145-grid-game](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2145-grid-game) |
 <!---LeetCode Topics End-->
