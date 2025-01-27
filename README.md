@@ -14,6 +14,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
 | [1876-map-of-highest-peak](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1876-map-of-highest-peak) |
 | [2145-grid-game](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2145-grid-game) |
+| [2422-query-kth-smallest-trimmed-number](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2422-query-kth-smallest-trimmed-number) |
 | [2685-first-completely-painted-row-or-column](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2685-first-completely-painted-row-or-column) |
 | [3219-make-lexicographically-smallest-array-by-swapping-elements](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3219-make-lexicographically-smallest-array-by-swapping-elements) |
 ## Backtracking
@@ -55,6 +56,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0407-trapping-rain-water-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0407-trapping-rain-water-ii) |
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
+| [2422-query-kth-smallest-trimmed-number](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2422-query-kth-smallest-trimmed-number) |
 ## Shortest Path
 |  |
 | ------- |
@@ -102,11 +104,13 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0164-maximum-gap](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0164-maximum-gap) |
+| [2422-query-kth-smallest-trimmed-number](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2422-query-kth-smallest-trimmed-number) |
 | [3219-make-lexicographically-smallest-array-by-swapping-elements](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3219-make-lexicographically-smallest-array-by-swapping-elements) |
 ## String
 |  |
 | ------- |
 | [0044-wildcard-matching](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0044-wildcard-matching) |
+| [2422-query-kth-smallest-trimmed-number](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2422-query-kth-smallest-trimmed-number) |
 ## Dynamic Programming
 |  |
 | ------- |
@@ -123,4 +127,13 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0164-maximum-gap](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0164-maximum-gap) |
+| [2422-query-kth-smallest-trimmed-number](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2422-query-kth-smallest-trimmed-number) |
+## Divide and Conquer
+|  |
+| ------- |
+| [2422-query-kth-smallest-trimmed-number](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2422-query-kth-smallest-trimmed-number) |
+## Quickselect
+|  |
+| ------- |
+| [2422-query-kth-smallest-trimmed-number](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2422-query-kth-smallest-trimmed-number) |
 <!---LeetCode Topics End-->
