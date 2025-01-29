@@ -21,6 +21,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Backtracking
 |  |
 | ------- |
+| [0022-generate-parentheses](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0022-generate-parentheses) |
 | [1022-unique-paths-iii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1022-unique-paths-iii) |
 ## Bit Manipulation
 |  |
@@ -118,11 +119,13 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## String
 |  |
 | ------- |
+| [0022-generate-parentheses](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0022-generate-parentheses) |
 | [0044-wildcard-matching](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0044-wildcard-matching) |
 | [2422-query-kth-smallest-trimmed-number](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2422-query-kth-smallest-trimmed-number) |
 ## Dynamic Programming
 |  |
 | ------- |
+| [0022-generate-parentheses](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0022-generate-parentheses) |
 | [0044-wildcard-matching](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0044-wildcard-matching) |
 ## Recursion
 |  |
