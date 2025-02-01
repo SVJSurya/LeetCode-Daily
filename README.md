@@ -94,6 +94,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Depth-First Search
 |  |
 | ------- |
+| [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
 | [0684-redundant-connection](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0684-redundant-connection) |
 | [0820-find-eventual-safe-states](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0820-find-eventual-safe-states) |
 | [0854-making-a-large-island](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0854-making-a-large-island) |
@@ -170,4 +171,16 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0019-remove-nth-node-from-end-of-list](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0019-remove-nth-node-from-end-of-list) |
 | [0206-reverse-linked-list](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0206-reverse-linked-list) |
+## Tree
+|  |
+| ------- |
+| [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
+## Binary Search Tree
+|  |
+| ------- |
+| [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
+## Binary Tree
+|  |
+| ------- |
+| [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
 <!---LeetCode Topics End-->
