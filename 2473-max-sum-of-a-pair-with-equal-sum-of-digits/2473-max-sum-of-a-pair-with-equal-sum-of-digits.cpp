@@ -18,10 +18,8 @@ public:
             sum = dig_sum(nums[i]);
             if(v[sum]!=-1){
                 ans = max(ans,v[sum]+nums[i]);
-                v[sum] = max(v[sum],nums[i]);
-            } else {
-                v[sum] = nums[i];
-            }            
+            }          
+            v[sum] = max(v[sum],nums[i]);
         }
         return ans;
     }
