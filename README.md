@@ -26,6 +26,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2764-maximum-number-of-fish-in-a-grid](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2764-maximum-number-of-fish-in-a-grid) |
 | [2917-count-pairs-whose-sum-is-less-than-target](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2917-count-pairs-whose-sum-is-less-than-target) |
 | [3219-make-lexicographically-smallest-array-by-swapping-elements](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3219-make-lexicographically-smallest-array-by-swapping-elements) |
+| [3332-minimum-operations-to-exceed-threshold-value-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3332-minimum-operations-to-exceed-threshold-value-ii) |
 | [3372-longest-strictly-increasing-or-strictly-decreasing-subarray](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3372-longest-strictly-increasing-or-strictly-decreasing-subarray) |
 | [3429-special-array-i](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3429-special-array-i) |
 | [3434-find-the-number-of-distinct-colors-among-the-balls](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3434-find-the-number-of-distinct-colors-among-the-balls) |
@@ -80,6 +81,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2422-query-kth-smallest-trimmed-number](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2422-query-kth-smallest-trimmed-number) |
 | [2434-design-a-number-container-system](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2434-design-a-number-container-system) |
 | [2473-max-sum-of-a-pair-with-equal-sum-of-digits](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2473-max-sum-of-a-pair-with-equal-sum-of-digits) |
+| [3332-minimum-operations-to-exceed-threshold-value-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3332-minimum-operations-to-exceed-threshold-value-ii) |
 ## Shortest Path
 |  |
 | ------- |
@@ -222,6 +224,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [2021-remove-all-occurrences-of-a-substring](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2021-remove-all-occurrences-of-a-substring) |
+| [3332-minimum-operations-to-exceed-threshold-value-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3332-minimum-operations-to-exceed-threshold-value-ii) |
 | [3434-find-the-number-of-distinct-colors-among-the-balls](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3434-find-the-number-of-distinct-colors-among-the-balls) |
 ## Design
 |  |
