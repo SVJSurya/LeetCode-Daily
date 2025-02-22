@@ -76,6 +76,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0820-find-eventual-safe-states](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0820-find-eventual-safe-states) |
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
 | [1558-course-schedule-iv](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1558-course-schedule-iv) |
+| [1916-find-center-of-star-graph](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1916-find-center-of-star-graph) |
 | [2246-maximum-employees-to-be-invited-to-a-meeting](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2246-maximum-employees-to-be-invited-to-a-meeting) |
 | [2583-divide-nodes-into-the-maximum-number-of-groups](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2583-divide-nodes-into-the-maximum-number-of-groups) |
 ## Heap (Priority Queue)
