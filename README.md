@@ -10,6 +10,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0164-maximum-gap](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0164-maximum-gap) |
 | [0407-trapping-rain-water-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0407-trapping-rain-water-ii) |
 | [0854-making-a-large-island](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0854-making-a-large-island) |
+| [0925-construct-binary-tree-from-preorder-and-postorder-traversal](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0925-construct-binary-tree-from-preorder-and-postorder-traversal) |
 | [1022-unique-paths-iii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1022-unique-paths-iii) |
 | [1364-tuple-with-same-product](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1364-tuple-with-same-product) |
 | [1396-count-servers-that-communicate](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1396-count-servers-that-communicate) |
@@ -96,6 +97,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Hash Table
 |  |
 | ------- |
+| [0925-construct-binary-tree-from-preorder-and-postorder-traversal](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0925-construct-binary-tree-from-preorder-and-postorder-traversal) |
 | [1364-tuple-with-same-product](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1364-tuple-with-same-product) |
 | [1915-check-if-one-string-swap-can-make-strings-equal](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1915-check-if-one-string-swap-can-make-strings-equal) |
 | [2107-find-unique-binary-string](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2107-find-unique-binary-string) |
@@ -206,6 +208,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0023-merge-k-sorted-lists](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0023-merge-k-sorted-lists) |
+| [0925-construct-binary-tree-from-preorder-and-postorder-traversal](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0925-construct-binary-tree-from-preorder-and-postorder-traversal) |
 | [2422-query-kth-smallest-trimmed-number](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2422-query-kth-smallest-trimmed-number) |
 ## Quickselect
 |  |
@@ -228,6 +231,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
+| [0925-construct-binary-tree-from-preorder-and-postorder-traversal](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0925-construct-binary-tree-from-preorder-and-postorder-traversal) |
 ## Binary Search Tree
 |  |
 | ------- |
@@ -237,6 +241,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
+| [0925-construct-binary-tree-from-preorder-and-postorder-traversal](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0925-construct-binary-tree-from-preorder-and-postorder-traversal) |
 ## Math
 |  |
 | ------- |
