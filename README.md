@@ -47,6 +47,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1022-unique-paths-iii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1022-unique-paths-iii) |
+| [2710-minimum-operations-to-reduce-an-integer-to-0](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2710-minimum-operations-to-reduce-an-integer-to-0) |
 ## Matrix
 |  |
 | ------- |
@@ -133,6 +134,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0402-remove-k-digits](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0402-remove-k-digits) |
 | [2148-minimum-number-of-moves-to-seat-everyone](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2148-minimum-number-of-moves-to-seat-everyone) |
 | [2456-construct-smallest-number-from-di-string](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2456-construct-smallest-number-from-di-string) |
+| [2710-minimum-operations-to-reduce-an-integer-to-0](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2710-minimum-operations-to-reduce-an-integer-to-0) |
 ## Depth-First Search
 |  |
 | ------- |
@@ -201,6 +203,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1236-n-th-tribonacci-number](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1236-n-th-tribonacci-number) |
 | [1631-number-of-sub-arrays-with-odd-sum](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1631-number-of-sub-arrays-with-odd-sum) |
 | [1849-maximum-absolute-sum-of-any-subarray](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1849-maximum-absolute-sum-of-any-subarray) |
+| [2710-minimum-operations-to-reduce-an-integer-to-0](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2710-minimum-operations-to-reduce-an-integer-to-0) |
 ## Recursion
 |  |
 | ------- |
