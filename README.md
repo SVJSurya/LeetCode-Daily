@@ -45,6 +45,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [3372-longest-strictly-increasing-or-strictly-decreasing-subarray](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3372-longest-strictly-increasing-or-strictly-decreasing-subarray) |
 | [3429-special-array-i](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3429-special-array-i) |
 | [3434-find-the-number-of-distinct-colors-among-the-balls](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3434-find-the-number-of-distinct-colors-among-the-balls) |
+| [3475-minimum-operations-to-make-binary-array-elements-equal-to-one-i](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3475-minimum-operations-to-make-binary-array-elements-equal-to-one-i) |
 | [3483-alternating-groups-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3483-alternating-groups-ii) |
 | [3790-fruits-into-baskets-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3790-fruits-into-baskets-ii) |
 ## Backtracking
@@ -61,6 +62,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2308-divide-array-into-equal-pairs](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2308-divide-array-into-equal-pairs) |
 | [2478-longest-nice-subarray](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2478-longest-nice-subarray) |
 | [2710-minimum-operations-to-reduce-an-integer-to-0](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2710-minimum-operations-to-reduce-an-integer-to-0) |
+| [3475-minimum-operations-to-make-binary-array-elements-equal-to-one-i](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3475-minimum-operations-to-make-binary-array-elements-equal-to-one-i) |
 ## Matrix
 |  |
 | ------- |
@@ -139,6 +141,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [1631-number-of-sub-arrays-with-odd-sum](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1631-number-of-sub-arrays-with-odd-sum) |
 | [2145-grid-game](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2145-grid-game) |
+| [3475-minimum-operations-to-make-binary-array-elements-equal-to-one-i](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3475-minimum-operations-to-make-binary-array-elements-equal-to-one-i) |
 ## Two Pointers
 |  |
 | ------- |
@@ -351,12 +354,14 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0239-sliding-window-maximum](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0239-sliding-window-maximum) |
+| [3475-minimum-operations-to-make-binary-array-elements-equal-to-one-i](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3475-minimum-operations-to-make-binary-array-elements-equal-to-one-i) |
 ## Sliding Window
 |  |
 | ------- |
 | [0239-sliding-window-maximum](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0239-sliding-window-maximum) |
 | [1460-number-of-substrings-containing-all-three-characters](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1460-number-of-substrings-containing-all-three-characters) |
 | [2478-longest-nice-subarray](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2478-longest-nice-subarray) |
+| [3475-minimum-operations-to-make-binary-array-elements-equal-to-one-i](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3475-minimum-operations-to-make-binary-array-elements-equal-to-one-i) |
 | [3483-alternating-groups-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3483-alternating-groups-ii) |
 ## Monotonic Queue
 |  |
