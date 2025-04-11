@@ -327,6 +327,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1236-n-th-tribonacci-number](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1236-n-th-tribonacci-number) |
 | [1631-number-of-sub-arrays-with-odd-sum](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1631-number-of-sub-arrays-with-odd-sum) |
 | [2448-count-number-of-bad-pairs](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2448-count-number-of-bad-pairs) |
+| [2998-count-symmetric-integers](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2998-count-symmetric-integers) |
 | [3227-find-missing-and-repeated-values](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3227-find-missing-and-repeated-values) |
 ## Simulation
 |  |
@@ -393,5 +394,6 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Enumeration
 |  |
 | ------- |
+| [2998-count-symmetric-integers](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2998-count-symmetric-integers) |
 | [3683-find-the-lexicographically-largest-string-from-the-box-i](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3683-find-the-lexicographically-largest-string-from-the-box-i) |
 <!---LeetCode Topics End-->
