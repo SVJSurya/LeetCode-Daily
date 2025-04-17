@@ -45,6 +45,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2917-count-pairs-whose-sum-is-less-than-target](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2917-count-pairs-whose-sum-is-less-than-target) |
 | [3154-maximum-value-of-an-ordered-triplet-i](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3154-maximum-value-of-an-ordered-triplet-i) |
 | [3219-make-lexicographically-smallest-array-by-swapping-elements](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3219-make-lexicographically-smallest-array-by-swapping-elements) |
+| [3221-find-the-peaks](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3221-find-the-peaks) |
 | [3227-find-missing-and-repeated-values](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3227-find-missing-and-repeated-values) |
 | [3332-minimum-operations-to-exceed-threshold-value-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3332-minimum-operations-to-exceed-threshold-value-ii) |
 | [3372-longest-strictly-increasing-or-strictly-decreasing-subarray](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3372-longest-strictly-increasing-or-strictly-decreasing-subarray) |
@@ -406,5 +407,6 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [2998-count-symmetric-integers](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2998-count-symmetric-integers) |
+| [3221-find-the-peaks](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3221-find-the-peaks) |
 | [3683-find-the-lexicographically-largest-string-from-the-box-i](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3683-find-the-lexicographically-largest-string-from-the-box-i) |
 <!---LeetCode Topics End-->
