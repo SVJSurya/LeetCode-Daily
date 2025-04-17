@@ -64,6 +64,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Bit Manipulation
 |  |
 | ------- |
+| [0389-find-the-difference](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0389-find-the-difference) |
 | [1022-unique-paths-iii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1022-unique-paths-iii) |
 | [2308-divide-array-into-equal-pairs](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2308-divide-array-into-equal-pairs) |
 | [2478-longest-nice-subarray](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2478-longest-nice-subarray) |
@@ -130,6 +131,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Hash Table
 |  |
 | ------- |
+| [0389-find-the-difference](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0389-find-the-difference) |
 | [0925-construct-binary-tree-from-preorder-and-postorder-traversal](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0925-construct-binary-tree-from-preorder-and-postorder-traversal) |
 | [1364-tuple-with-same-product](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1364-tuple-with-same-product) |
 | [1460-number-of-substrings-containing-all-three-characters](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1460-number-of-substrings-containing-all-three-characters) |
@@ -215,6 +217,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0164-maximum-gap](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0164-maximum-gap) |
 | [0368-largest-divisible-subset](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0368-largest-divisible-subset) |
+| [0389-find-the-difference](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0389-find-the-difference) |
 | [2148-minimum-number-of-moves-to-seat-everyone](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2148-minimum-number-of-moves-to-seat-everyone) |
 | [2422-query-kth-smallest-trimmed-number](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2422-query-kth-smallest-trimmed-number) |
 | [2473-max-sum-of-a-pair-with-equal-sum-of-digits](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2473-max-sum-of-a-pair-with-equal-sum-of-digits) |
@@ -230,6 +233,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0072-edit-distance](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0072-edit-distance) |
 | [0151-reverse-words-in-a-string](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0151-reverse-words-in-a-string) |
 | [0171-excel-sheet-column-number](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0171-excel-sheet-column-number) |
+| [0389-find-the-difference](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0389-find-the-difference) |
 | [0392-is-subsequence](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0392-is-subsequence) |
 | [0402-remove-k-digits](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0402-remove-k-digits) |
 | [1170-shortest-common-supersequence](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1170-shortest-common-supersequence) |
