@@ -282,6 +282,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0044-wildcard-matching](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0044-wildcard-matching) |
+| [0203-remove-linked-list-elements](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0203-remove-linked-list-elements) |
 | [0206-reverse-linked-list](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0206-reverse-linked-list) |
 | [2050-count-good-numbers](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2050-count-good-numbers) |
 ## Bucket Sort
@@ -318,6 +319,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0019-remove-nth-node-from-end-of-list](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0019-remove-nth-node-from-end-of-list) |
 | [0023-merge-k-sorted-lists](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0023-merge-k-sorted-lists) |
+| [0203-remove-linked-list-elements](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0203-remove-linked-list-elements) |
 | [0206-reverse-linked-list](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0206-reverse-linked-list) |
 ## Tree
 |  |
