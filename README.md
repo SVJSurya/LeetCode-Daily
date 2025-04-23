@@ -144,6 +144,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0925-construct-binary-tree-from-preorder-and-postorder-traversal](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0925-construct-binary-tree-from-preorder-and-postorder-traversal) |
 | [1364-tuple-with-same-product](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1364-tuple-with-same-product) |
 | [1460-number-of-substrings-containing-all-three-characters](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1460-number-of-substrings-containing-all-three-characters) |
+| [1500-count-largest-group](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1500-count-largest-group) |
 | [1915-check-if-one-string-swap-can-make-strings-equal](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1915-check-if-one-string-swap-can-make-strings-equal) |
 | [2107-find-unique-binary-string](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2107-find-unique-binary-string) |
 | [2308-divide-array-into-equal-pairs](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2308-divide-array-into-equal-pairs) |
@@ -374,6 +375,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0797-rabbits-in-forest](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0797-rabbits-in-forest) |
 | [1086-divisor-game](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1086-divisor-game) |
 | [1236-n-th-tribonacci-number](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1236-n-th-tribonacci-number) |
+| [1500-count-largest-group](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1500-count-largest-group) |
 | [1631-number-of-sub-arrays-with-odd-sum](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1631-number-of-sub-arrays-with-odd-sum) |
 | [2050-count-good-numbers](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2050-count-good-numbers) |
 | [2448-count-number-of-bad-pairs](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2448-count-number-of-bad-pairs) |
