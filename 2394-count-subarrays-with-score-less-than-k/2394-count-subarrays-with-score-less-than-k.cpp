@@ -1,16 +1,20 @@
 class Solution {
 public:
     long long countSubarrays(vector<int>& nums, long long k) {
-       long long rs = 0, tt = 0;
-       int n = nums.size();
-       for(int i=0,j=0;j<n;j++) {
-            tt += nums[j];
-            while(i <= j && tt*(j-i+1) >= k) {
-                tt -= nums[i];
-                i++;
+        long long res = 0;
+        long long sum = 0;
+        long long count = 0;
+        int low = 0;
+        for(int i=0; i<nums.size(); i++){
+            sum += nums[i];
+            count++;
+            while(sum*count >= k){
+                sum -= nums[low];
+                count--;
+                low++;
             }
-            rs += j -i +1;
-       } 
-       return rs;
+            res += count;
+        }
+        return res;
     }
 };
