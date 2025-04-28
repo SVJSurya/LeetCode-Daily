@@ -35,6 +35,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2265-partition-array-according-to-given-pivot](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2265-partition-array-according-to-given-pivot) |
 | [2277-count-equal-and-divisible-pairs-in-an-array](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2277-count-equal-and-divisible-pairs-in-an-array) |
 | [2308-divide-array-into-equal-pairs](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2308-divide-array-into-equal-pairs) |
+| [2394-count-subarrays-with-score-less-than-k](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2394-count-subarrays-with-score-less-than-k) |
 | [2422-query-kth-smallest-trimmed-number](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2422-query-kth-smallest-trimmed-number) |
 | [2448-count-number-of-bad-pairs](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2448-count-number-of-bad-pairs) |
 | [2473-max-sum-of-a-pair-with-equal-sum-of-digits](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2473-max-sum-of-a-pair-with-equal-sum-of-digits) |
@@ -161,6 +162,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1631-number-of-sub-arrays-with-odd-sum](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1631-number-of-sub-arrays-with-odd-sum) |
 | [2145-grid-game](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2145-grid-game) |
 | [2249-count-the-hidden-sequences](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2249-count-the-hidden-sequences) |
+| [2394-count-subarrays-with-score-less-than-k](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2394-count-subarrays-with-score-less-than-k) |
 | [3475-minimum-operations-to-make-binary-array-elements-equal-to-one-i](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3475-minimum-operations-to-make-binary-array-elements-equal-to-one-i) |
 ## Two Pointers
 |  |
@@ -354,6 +356,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
 | [0287-find-the-duplicate-number](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0287-find-the-duplicate-number) |
 | [1335-maximum-candies-allocated-to-k-children](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1335-maximum-candies-allocated-to-k-children) |
+| [2394-count-subarrays-with-score-less-than-k](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2394-count-subarrays-with-score-less-than-k) |
 | [2614-maximum-count-of-positive-integer-and-negative-integer](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2614-maximum-count-of-positive-integer-and-negative-integer) |
 | [2665-minimum-time-to-repair-cars](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2665-minimum-time-to-repair-cars) |
 | [2917-count-pairs-whose-sum-is-less-than-target](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2917-count-pairs-whose-sum-is-less-than-target) |
@@ -432,6 +435,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0239-sliding-window-maximum](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0239-sliding-window-maximum) |
 | [1460-number-of-substrings-containing-all-three-characters](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1460-number-of-substrings-containing-all-three-characters) |
+| [2394-count-subarrays-with-score-less-than-k](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2394-count-subarrays-with-score-less-than-k) |
 | [2478-longest-nice-subarray](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2478-longest-nice-subarray) |
 | [2527-count-subarrays-with-fixed-bounds](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2527-count-subarrays-with-fixed-bounds) |
 | [3475-minimum-operations-to-make-binary-array-elements-equal-to-one-i](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3475-minimum-operations-to-make-binary-array-elements-equal-to-one-i) |
