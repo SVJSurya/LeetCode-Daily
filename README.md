@@ -31,6 +31,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2107-find-unique-binary-string](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2107-find-unique-binary-string) |
 | [2145-grid-game](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2145-grid-game) |
 | [2148-minimum-number-of-moves-to-seat-everyone](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2148-minimum-number-of-moves-to-seat-everyone) |
+| [2180-maximum-number-of-tasks-you-can-assign](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2180-maximum-number-of-tasks-you-can-assign) |
 | [2249-count-the-hidden-sequences](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2249-count-the-hidden-sequences) |
 | [2262-solving-questions-with-brainpower](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2262-solving-questions-with-brainpower) |
 | [2265-partition-array-according-to-given-pivot](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2265-partition-array-according-to-given-pivot) |
@@ -186,6 +187,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0402-remove-k-digits](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0402-remove-k-digits) |
 | [0797-rabbits-in-forest](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0797-rabbits-in-forest) |
 | [2148-minimum-number-of-moves-to-seat-everyone](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2148-minimum-number-of-moves-to-seat-everyone) |
+| [2180-maximum-number-of-tasks-you-can-assign](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2180-maximum-number-of-tasks-you-can-assign) |
 | [2456-construct-smallest-number-from-di-string](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2456-construct-smallest-number-from-di-string) |
 | [2710-minimum-operations-to-reduce-an-integer-to-0](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2710-minimum-operations-to-reduce-an-integer-to-0) |
 ## Depth-First Search
@@ -239,6 +241,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0368-largest-divisible-subset](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0368-largest-divisible-subset) |
 | [0389-find-the-difference](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0389-find-the-difference) |
 | [2148-minimum-number-of-moves-to-seat-everyone](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2148-minimum-number-of-moves-to-seat-everyone) |
+| [2180-maximum-number-of-tasks-you-can-assign](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2180-maximum-number-of-tasks-you-can-assign) |
 | [2422-query-kth-smallest-trimmed-number](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2422-query-kth-smallest-trimmed-number) |
 | [2473-max-sum-of-a-pair-with-equal-sum-of-digits](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2473-max-sum-of-a-pair-with-equal-sum-of-digits) |
 | [2917-count-pairs-whose-sum-is-less-than-target](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2917-count-pairs-whose-sum-is-less-than-target) |
@@ -357,6 +360,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
 | [0287-find-the-duplicate-number](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0287-find-the-duplicate-number) |
 | [1335-maximum-candies-allocated-to-k-children](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1335-maximum-candies-allocated-to-k-children) |
+| [2180-maximum-number-of-tasks-you-can-assign](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2180-maximum-number-of-tasks-you-can-assign) |
 | [2394-count-subarrays-with-score-less-than-k](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2394-count-subarrays-with-score-less-than-k) |
 | [2614-maximum-count-of-positive-integer-and-negative-integer](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2614-maximum-count-of-positive-integer-and-negative-integer) |
 | [2665-minimum-time-to-repair-cars](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2665-minimum-time-to-repair-cars) |
@@ -430,6 +434,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0225-implement-stack-using-queues](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0225-implement-stack-using-queues) |
 | [0239-sliding-window-maximum](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0239-sliding-window-maximum) |
+| [2180-maximum-number-of-tasks-you-can-assign](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2180-maximum-number-of-tasks-you-can-assign) |
 | [2527-count-subarrays-with-fixed-bounds](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2527-count-subarrays-with-fixed-bounds) |
 | [3475-minimum-operations-to-make-binary-array-elements-equal-to-one-i](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3475-minimum-operations-to-make-binary-array-elements-equal-to-one-i) |
 ## Sliding Window
@@ -446,6 +451,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0239-sliding-window-maximum](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0239-sliding-window-maximum) |
+| [2180-maximum-number-of-tasks-you-can-assign](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2180-maximum-number-of-tasks-you-can-assign) |
 | [2527-count-subarrays-with-fixed-bounds](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2527-count-subarrays-with-fixed-bounds) |
 ## Brainteaser
 |  |
