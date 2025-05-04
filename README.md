@@ -18,6 +18,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0854-making-a-large-island](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0854-making-a-large-island) |
 | [0925-construct-binary-tree-from-preorder-and-postorder-traversal](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0925-construct-binary-tree-from-preorder-and-postorder-traversal) |
 | [1022-unique-paths-iii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1022-unique-paths-iii) |
+| [1227-number-of-equivalent-domino-pairs](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1227-number-of-equivalent-domino-pairs) |
 | [1335-maximum-candies-allocated-to-k-children](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1335-maximum-candies-allocated-to-k-children) |
 | [1364-tuple-with-same-product](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1364-tuple-with-same-product) |
 | [1396-count-servers-that-communicate](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1396-count-servers-that-communicate) |
@@ -146,6 +147,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0389-find-the-difference](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0389-find-the-difference) |
 | [0797-rabbits-in-forest](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0797-rabbits-in-forest) |
 | [0925-construct-binary-tree-from-preorder-and-postorder-traversal](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0925-construct-binary-tree-from-preorder-and-postorder-traversal) |
+| [1227-number-of-equivalent-domino-pairs](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1227-number-of-equivalent-domino-pairs) |
 | [1364-tuple-with-same-product](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1364-tuple-with-same-product) |
 | [1460-number-of-substrings-containing-all-three-characters](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1460-number-of-substrings-containing-all-three-characters) |
 | [1500-count-largest-group](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1500-count-largest-group) |
@@ -222,6 +224,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Counting
 |  |
 | ------- |
+| [1227-number-of-equivalent-domino-pairs](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1227-number-of-equivalent-domino-pairs) |
 | [1364-tuple-with-same-product](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1364-tuple-with-same-product) |
 | [1396-count-servers-that-communicate](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1396-count-servers-that-communicate) |
 | [1915-check-if-one-string-swap-can-make-strings-equal](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1915-check-if-one-string-swap-can-make-strings-equal) |
