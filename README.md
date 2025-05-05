@@ -284,6 +284,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0368-largest-divisible-subset](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0368-largest-divisible-subset) |
 | [0392-is-subsequence](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0392-is-subsequence) |
 | [0416-partition-equal-subset-sum](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0416-partition-equal-subset-sum) |
+| [0806-domino-and-tromino-tiling](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0806-domino-and-tromino-tiling) |
 | [1086-divisor-game](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1086-divisor-game) |
 | [1170-shortest-common-supersequence](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1170-shortest-common-supersequence) |
 | [1236-n-th-tribonacci-number](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1236-n-th-tribonacci-number) |
