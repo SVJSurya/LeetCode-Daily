@@ -1,26 +1,35 @@
 class Solution {
 public:
     long long minSum(vector<int>& nums1, vector<int>& nums2) {
-        long long sum1 = 0, sum2 = 0;
-        long long zero1 = 0, zero2 = 0;
+        ios_base::sync_with_stdio(false);
+        cin.tie(0);
+        cout.tie(0);
 
-        for(int i : nums1) {
-            sum1 += i;
-            if(i== 0) {
+        long long sum1 = 0, sum2 = 0;
+        bool flag1 = false, flag2 = false;
+
+        for (auto& n : nums1) {
+            sum1 += n;
+
+            if (n == 0) {
                 sum1++;
-                zero1++;
+                flag1 = true;
             }
         }
-        for(int i : nums2) {
-            sum2 += i;
-            if(i==0) {
+
+        for (auto& n : nums2) {
+            sum2 += n;
+
+            if (n == 0) {
                 sum2++;
-                zero2++;
+                flag2 = true;
             }
         }
-        if(!zero1 && sum2 > sum1 || !zero2 && sum1 > sum2) {
+
+        if (flag1 == false && sum1 < sum2 || flag2 == false && sum2 < sum1) {
             return -1;
         }
+
         return max(sum1, sum2);
     }
 };
