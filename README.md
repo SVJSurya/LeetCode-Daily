@@ -294,6 +294,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## String
 |  |
 | ------- |
+| [0014-longest-common-prefix](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0014-longest-common-prefix) |
 | [0022-generate-parentheses](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0022-generate-parentheses) |
 | [0032-longest-valid-parentheses](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0032-longest-valid-parentheses) |
 | [0038-count-and-say](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0038-count-and-say) |
@@ -543,4 +544,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [3637-count-number-of-balanced-permutations](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3637-count-number-of-balanced-permutations) |
+## Trie
+|  |
+| ------- |
+| [0014-longest-common-prefix](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0014-longest-common-prefix) |
 <!---LeetCode Topics End-->
