@@ -169,6 +169,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Hash Table
 |  |
 | ------- |
+| [0205-isomorphic-strings](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0205-isomorphic-strings) |
 | [0389-find-the-difference](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0389-find-the-difference) |
 | [0797-rabbits-in-forest](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0797-rabbits-in-forest) |
 | [0925-construct-binary-tree-from-preorder-and-postorder-traversal](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0925-construct-binary-tree-from-preorder-and-postorder-traversal) |
@@ -307,6 +308,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0072-edit-distance](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0072-edit-distance) |
 | [0151-reverse-words-in-a-string](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0151-reverse-words-in-a-string) |
 | [0171-excel-sheet-column-number](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0171-excel-sheet-column-number) |
+| [0205-isomorphic-strings](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0205-isomorphic-strings) |
 | [0389-find-the-difference](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0389-find-the-difference) |
 | [0392-is-subsequence](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0392-is-subsequence) |
 | [0402-remove-k-digits](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0402-remove-k-digits) |
