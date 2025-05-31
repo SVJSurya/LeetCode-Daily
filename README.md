@@ -313,6 +313,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0392-is-subsequence](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0392-is-subsequence) |
 | [0402-remove-k-digits](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0402-remove-k-digits) |
 | [0556-next-greater-element-iii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0556-next-greater-element-iii) |
+| [0812-rotate-string](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0812-rotate-string) |
 | [1170-shortest-common-supersequence](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1170-shortest-common-supersequence) |
 | [1460-number-of-substrings-containing-all-three-characters](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1460-number-of-substrings-containing-all-three-characters) |
 | [1915-check-if-one-string-swap-can-make-strings-equal](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1915-check-if-one-string-swap-can-make-strings-equal) |
@@ -558,4 +559,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0014-longest-common-prefix](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0014-longest-common-prefix) |
+## String Matching
+|  |
+| ------- |
+| [0812-rotate-string](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0812-rotate-string) |
 <!---LeetCode Topics End-->
