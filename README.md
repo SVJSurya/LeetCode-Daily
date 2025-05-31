@@ -170,6 +170,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0205-isomorphic-strings](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0205-isomorphic-strings) |
+| [0242-valid-anagram](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0242-valid-anagram) |
 | [0389-find-the-difference](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0389-find-the-difference) |
 | [0797-rabbits-in-forest](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0797-rabbits-in-forest) |
 | [0925-construct-binary-tree-from-preorder-and-postorder-traversal](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0925-construct-binary-tree-from-preorder-and-postorder-traversal) |
@@ -286,6 +287,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0088-merge-sorted-array](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0088-merge-sorted-array) |
 | [0164-maximum-gap](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0164-maximum-gap) |
+| [0242-valid-anagram](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0242-valid-anagram) |
 | [0368-largest-divisible-subset](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0368-largest-divisible-subset) |
 | [0389-find-the-difference](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0389-find-the-difference) |
 | [2148-minimum-number-of-moves-to-seat-everyone](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2148-minimum-number-of-moves-to-seat-everyone) |
@@ -309,6 +311,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0151-reverse-words-in-a-string](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0151-reverse-words-in-a-string) |
 | [0171-excel-sheet-column-number](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0171-excel-sheet-column-number) |
 | [0205-isomorphic-strings](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0205-isomorphic-strings) |
+| [0242-valid-anagram](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0242-valid-anagram) |
 | [0389-find-the-difference](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0389-find-the-difference) |
 | [0392-is-subsequence](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0392-is-subsequence) |
 | [0402-remove-k-digits](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0402-remove-k-digits) |
