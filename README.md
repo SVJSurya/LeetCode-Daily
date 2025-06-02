@@ -12,6 +12,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0080-remove-duplicates-from-sorted-array-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0080-remove-duplicates-from-sorted-array-ii) |
 | [0081-search-in-rotated-sorted-array-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0081-search-in-rotated-sorted-array-ii) |
 | [0088-merge-sorted-array](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0088-merge-sorted-array) |
+| [0135-candy](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0135-candy) |
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0153-find-minimum-in-rotated-sorted-array) |
 | [0164-maximum-gap](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0164-maximum-gap) |
 | [0239-sliding-window-maximum](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0239-sliding-window-maximum) |
@@ -226,6 +227,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0011-container-with-most-water](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0011-container-with-most-water) |
 | [0044-wildcard-matching](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0044-wildcard-matching) |
+| [0135-candy](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0135-candy) |
 | [0402-remove-k-digits](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0402-remove-k-digits) |
 | [0797-rabbits-in-forest](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0797-rabbits-in-forest) |
 | [2148-minimum-number-of-moves-to-seat-everyone](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2148-minimum-number-of-moves-to-seat-everyone) |
