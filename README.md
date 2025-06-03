@@ -346,6 +346,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0022-generate-parentheses](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0022-generate-parentheses) |
 | [0032-longest-valid-parentheses](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0032-longest-valid-parentheses) |
 | [0044-wildcard-matching](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0044-wildcard-matching) |
+| [0070-climbing-stairs](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0070-climbing-stairs) |
 | [0072-edit-distance](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0072-edit-distance) |
 | [0095-unique-binary-search-trees-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0095-unique-binary-search-trees-ii) |
 | [0096-unique-binary-search-trees](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0096-unique-binary-search-trees) |
@@ -467,6 +468,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Math
 |  |
 | ------- |
+| [0070-climbing-stairs](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0070-climbing-stairs) |
 | [0096-unique-binary-search-trees](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0096-unique-binary-search-trees) |
 | [0171-excel-sheet-column-number](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0171-excel-sheet-column-number) |
 | [0368-largest-divisible-subset](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0368-largest-divisible-subset) |
@@ -519,6 +521,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Memoization
 |  |
 | ------- |
+| [0070-climbing-stairs](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0070-climbing-stairs) |
 | [0787-sliding-puzzle](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0787-sliding-puzzle) |
 | [1236-n-th-tribonacci-number](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1236-n-th-tribonacci-number) |
 | [1986-largest-color-value-in-a-directed-graph](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1986-largest-color-value-in-a-directed-graph) |
