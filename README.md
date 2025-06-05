@@ -15,6 +15,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0135-candy](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0135-candy) |
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0153-find-minimum-in-rotated-sorted-array) |
 | [0164-maximum-gap](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0164-maximum-gap) |
+| [0229-majority-element-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0229-majority-element-ii) |
 | [0239-sliding-window-maximum](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0239-sliding-window-maximum) |
 | [0287-find-the-duplicate-number](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0287-find-the-duplicate-number) |
 | [0368-largest-divisible-subset](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0368-largest-divisible-subset) |
@@ -176,6 +177,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0205-isomorphic-strings](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0205-isomorphic-strings) |
+| [0229-majority-element-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0229-majority-element-ii) |
 | [0242-valid-anagram](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0242-valid-anagram) |
 | [0389-find-the-difference](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0389-find-the-difference) |
 | [0451-sort-characters-by-frequency](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0451-sort-characters-by-frequency) |
@@ -272,6 +274,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Counting
 |  |
 | ------- |
+| [0229-majority-element-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0229-majority-element-ii) |
 | [0451-sort-characters-by-frequency](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0451-sort-characters-by-frequency) |
 | [1227-number-of-equivalent-domino-pairs](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1227-number-of-equivalent-domino-pairs) |
 | [1364-tuple-with-same-product](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1364-tuple-with-same-product) |
@@ -296,6 +299,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0088-merge-sorted-array](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0088-merge-sorted-array) |
 | [0164-maximum-gap](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0164-maximum-gap) |
+| [0229-majority-element-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0229-majority-element-ii) |
 | [0242-valid-anagram](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0242-valid-anagram) |
 | [0368-largest-divisible-subset](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0368-largest-divisible-subset) |
 | [0389-find-the-difference](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0389-find-the-difference) |
