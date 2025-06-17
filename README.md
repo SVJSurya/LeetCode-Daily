@@ -241,6 +241,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2237-longest-palindrome-by-concatenating-two-letter-words](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2237-longest-palindrome-by-concatenating-two-letter-words) |
 | [2456-construct-smallest-number-from-di-string](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2456-construct-smallest-number-from-di-string) |
 | [2520-using-a-robot-to-print-the-lexicographically-smallest-string](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2520-using-a-robot-to-print-the-lexicographically-smallest-string) |
+| [2704-maximum-difference-by-remapping-a-digit](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2704-maximum-difference-by-remapping-a-digit) |
 | [2710-minimum-operations-to-reduce-an-integer-to-0](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2710-minimum-operations-to-reduce-an-integer-to-0) |
 | [3171-minimum-equal-sum-of-two-arrays-after-replacing-zeros](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3171-minimum-equal-sum-of-two-arrays-after-replacing-zeros) |
 | [3307-find-the-maximum-sum-of-node-values](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3307-find-the-maximum-sum-of-node-values) |
@@ -494,6 +495,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1631-number-of-sub-arrays-with-odd-sum](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1631-number-of-sub-arrays-with-odd-sum) |
 | [2050-count-good-numbers](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2050-count-good-numbers) |
 | [2448-count-number-of-bad-pairs](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2448-count-number-of-bad-pairs) |
+| [2704-maximum-difference-by-remapping-a-digit](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2704-maximum-difference-by-remapping-a-digit) |
 | [2998-count-symmetric-integers](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2998-count-symmetric-integers) |
 | [3172-divisible-and-non-divisible-sums-difference](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3172-divisible-and-non-divisible-sums-difference) |
 | [3227-find-missing-and-repeated-values](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3227-find-missing-and-repeated-values) |
