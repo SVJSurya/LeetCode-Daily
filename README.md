@@ -16,6 +16,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0135-candy](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0135-candy) |
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0153-find-minimum-in-rotated-sorted-array) |
 | [0164-maximum-gap](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0164-maximum-gap) |
+| [0200-number-of-islands](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0200-number-of-islands) |
 | [0229-majority-element-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0229-majority-element-ii) |
 | [0239-sliding-window-maximum](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0239-sliding-window-maximum) |
 | [0287-find-the-duplicate-number](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0287-find-the-duplicate-number) |
@@ -108,6 +109,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Matrix
 |  |
 | ------- |
+| [0200-number-of-islands](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0200-number-of-islands) |
 | [0407-trapping-rain-water-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0407-trapping-rain-water-ii) |
 | [0695-max-area-of-island](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0695-max-area-of-island) |
 | [0787-sliding-puzzle](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0787-sliding-puzzle) |
@@ -125,6 +127,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Breadth-First Search
 |  |
 | ------- |
+| [0200-number-of-islands](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0200-number-of-islands) |
 | [0407-trapping-rain-water-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0407-trapping-rain-water-ii) |
 | [0547-number-of-provinces](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0547-number-of-provinces) |
 | [0617-merge-two-binary-trees](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0617-merge-two-binary-trees) |
@@ -255,6 +258,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0094-binary-tree-inorder-traversal](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0094-binary-tree-inorder-traversal) |
 | [0098-validate-binary-search-tree](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0098-validate-binary-search-tree) |
 | [0124-binary-tree-maximum-path-sum](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0124-binary-tree-maximum-path-sum) |
+| [0200-number-of-islands](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0200-number-of-islands) |
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
 | [0543-diameter-of-binary-tree](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0543-diameter-of-binary-tree) |
 | [0547-number-of-provinces](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0547-number-of-provinces) |
@@ -274,6 +278,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Union Find
 |  |
 | ------- |
+| [0200-number-of-islands](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0200-number-of-islands) |
 | [0547-number-of-provinces](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0547-number-of-provinces) |
 | [0684-redundant-connection](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0684-redundant-connection) |
 | [0695-max-area-of-island](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0695-max-area-of-island) |
