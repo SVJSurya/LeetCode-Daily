@@ -24,6 +24,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0403-frog-jump](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0403-frog-jump) |
 | [0407-trapping-rain-water-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0407-trapping-rain-water-ii) |
 | [0416-partition-equal-subset-sum](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0416-partition-equal-subset-sum) |
+| [0542-01-matrix](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0542-01-matrix) |
 | [0695-max-area-of-island](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0695-max-area-of-island) |
 | [0787-sliding-puzzle](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0787-sliding-puzzle) |
 | [0797-rabbits-in-forest](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0797-rabbits-in-forest) |
@@ -111,6 +112,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0200-number-of-islands](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0200-number-of-islands) |
 | [0407-trapping-rain-water-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0407-trapping-rain-water-ii) |
+| [0542-01-matrix](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0542-01-matrix) |
 | [0695-max-area-of-island](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0695-max-area-of-island) |
 | [0787-sliding-puzzle](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0787-sliding-puzzle) |
 | [0854-making-a-large-island](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0854-making-a-large-island) |
@@ -129,6 +131,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0200-number-of-islands](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0200-number-of-islands) |
 | [0407-trapping-rain-water-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0407-trapping-rain-water-ii) |
+| [0542-01-matrix](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0542-01-matrix) |
 | [0547-number-of-provinces](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0547-number-of-provinces) |
 | [0617-merge-two-binary-trees](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0617-merge-two-binary-trees) |
 | [0684-redundant-connection](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0684-redundant-connection) |
@@ -380,6 +383,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0392-is-subsequence](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0392-is-subsequence) |
 | [0403-frog-jump](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0403-frog-jump) |
 | [0416-partition-equal-subset-sum](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0416-partition-equal-subset-sum) |
+| [0542-01-matrix](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0542-01-matrix) |
 | [0787-sliding-puzzle](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0787-sliding-puzzle) |
 | [0806-domino-and-tromino-tiling](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0806-domino-and-tromino-tiling) |
 | [1086-divisor-game](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1086-divisor-game) |
