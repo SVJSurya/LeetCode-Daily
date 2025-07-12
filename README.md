@@ -416,6 +416,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1631-number-of-sub-arrays-with-odd-sum](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1631-number-of-sub-arrays-with-odd-sum) |
 | [1849-maximum-absolute-sum-of-any-subarray](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1849-maximum-absolute-sum-of-any-subarray) |
 | [1986-largest-color-value-in-a-directed-graph](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1986-largest-color-value-in-a-directed-graph) |
+| [2028-the-earliest-and-latest-rounds-where-players-compete](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2028-the-earliest-and-latest-rounds-where-players-compete) |
 | [2262-solving-questions-with-brainpower](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2262-solving-questions-with-brainpower) |
 | [2395-longest-binary-subsequence-less-than-or-equal-to-k](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2395-longest-binary-subsequence-less-than-or-equal-to-k) |
 | [2710-minimum-operations-to-reduce-an-integer-to-0](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2710-minimum-operations-to-reduce-an-integer-to-0) |
@@ -585,6 +586,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0787-sliding-puzzle](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0787-sliding-puzzle) |
 | [1236-n-th-tribonacci-number](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1236-n-th-tribonacci-number) |
 | [1986-largest-color-value-in-a-directed-graph](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1986-largest-color-value-in-a-directed-graph) |
+| [2028-the-earliest-and-latest-rounds-where-players-compete](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2028-the-earliest-and-latest-rounds-where-players-compete) |
 | [2395-longest-binary-subsequence-less-than-or-equal-to-k](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2395-longest-binary-subsequence-less-than-or-equal-to-k) |
 ## Queue
 |  |
