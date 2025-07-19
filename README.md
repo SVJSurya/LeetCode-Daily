@@ -10,6 +10,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0011-container-with-most-water](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0011-container-with-most-water) |
 | [0018-4sum](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0018-4sum) |
 | [0033-search-in-rotated-sorted-array](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0033-search-in-rotated-sorted-array) |
+| [0056-merge-intervals](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0056-merge-intervals) |
 | [0080-remove-duplicates-from-sorted-array-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0080-remove-duplicates-from-sorted-array-ii) |
 | [0081-search-in-rotated-sorted-array-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0081-search-in-rotated-sorted-array-ii) |
 | [0088-merge-sorted-array](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0088-merge-sorted-array) |
@@ -344,6 +345,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0018-4sum](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0018-4sum) |
+| [0056-merge-intervals](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0056-merge-intervals) |
 | [0088-merge-sorted-array](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0088-merge-sorted-array) |
 | [0164-maximum-gap](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0164-maximum-gap) |
 | [0229-majority-element-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0229-majority-element-ii) |
