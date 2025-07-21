@@ -10,6 +10,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0011-container-with-most-water](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0011-container-with-most-water) |
 | [0018-4sum](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0018-4sum) |
 | [0033-search-in-rotated-sorted-array](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0033-search-in-rotated-sorted-array) |
+| [0046-permutations](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0046-permutations) |
 | [0056-merge-intervals](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0056-merge-intervals) |
 | [0080-remove-duplicates-from-sorted-array-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0080-remove-duplicates-from-sorted-array-ii) |
 | [0081-search-in-rotated-sorted-array-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0081-search-in-rotated-sorted-array-ii) |
@@ -97,6 +98,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0022-generate-parentheses](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0022-generate-parentheses) |
+| [0046-permutations](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0046-permutations) |
 | [0095-unique-binary-search-trees-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0095-unique-binary-search-trees-ii) |
 | [0787-sliding-puzzle](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0787-sliding-puzzle) |
 | [1022-unique-paths-iii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1022-unique-paths-iii) |
