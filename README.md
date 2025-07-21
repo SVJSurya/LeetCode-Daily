@@ -93,6 +93,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [3434-find-the-number-of-distinct-colors-among-the-balls](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3434-find-the-number-of-distinct-colors-among-the-balls) |
 | [3475-minimum-operations-to-make-binary-array-elements-equal-to-one-i](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3475-minimum-operations-to-make-binary-array-elements-equal-to-one-i) |
 | [3483-alternating-groups-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3483-alternating-groups-ii) |
+| [3591-shift-distance-between-two-strings](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3591-shift-distance-between-two-strings) |
 | [3627-find-minimum-time-to-reach-last-room-i](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3627-find-minimum-time-to-reach-last-room-i) |
 | [3790-fruits-into-baskets-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3790-fruits-into-baskets-ii) |
 ## Backtracking
@@ -244,6 +245,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2249-count-the-hidden-sequences](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2249-count-the-hidden-sequences) |
 | [2394-count-subarrays-with-score-less-than-k](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2394-count-subarrays-with-score-less-than-k) |
 | [3475-minimum-operations-to-make-binary-array-elements-equal-to-one-i](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3475-minimum-operations-to-make-binary-array-elements-equal-to-one-i) |
+| [3591-shift-distance-between-two-strings](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3591-shift-distance-between-two-strings) |
 ## Two Pointers
 |  |
 | ------- |
@@ -397,6 +399,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2456-construct-smallest-number-from-di-string](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2456-construct-smallest-number-from-di-string) |
 | [2520-using-a-robot-to-print-the-lexicographically-smallest-string](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2520-using-a-robot-to-print-the-lexicographically-smallest-string) |
 | [3194-find-words-containing-character](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3194-find-words-containing-character) |
+| [3591-shift-distance-between-two-strings](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3591-shift-distance-between-two-strings) |
 | [3629-total-characters-in-string-after-transformations-i](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3629-total-characters-in-string-after-transformations-i) |
 | [3630-total-characters-in-string-after-transformations-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3630-total-characters-in-string-after-transformations-ii) |
 | [3637-count-number-of-balanced-permutations](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3637-count-number-of-balanced-permutations) |
