@@ -163,6 +163,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1558-course-schedule-iv](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1558-course-schedule-iv) |
 | [1876-map-of-highest-peak](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1876-map-of-highest-peak) |
 | [2206-detonate-the-maximum-bombs](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2206-detonate-the-maximum-bombs) |
+| [2403-count-unreachable-pairs-of-nodes-in-an-undirected-graph](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2403-count-unreachable-pairs-of-nodes-in-an-undirected-graph) |
 | [2564-most-profitable-path-in-a-tree](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2564-most-profitable-path-in-a-tree) |
 | [2583-divide-nodes-into-the-maximum-number-of-groups](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2583-divide-nodes-into-the-maximum-number-of-groups) |
 | [2764-maximum-number-of-fish-in-a-grid](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2764-maximum-number-of-fish-in-a-grid) |
@@ -183,6 +184,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1986-largest-color-value-in-a-directed-graph](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1986-largest-color-value-in-a-directed-graph) |
 | [2206-detonate-the-maximum-bombs](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2206-detonate-the-maximum-bombs) |
 | [2246-maximum-employees-to-be-invited-to-a-meeting](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2246-maximum-employees-to-be-invited-to-a-meeting) |
+| [2403-count-unreachable-pairs-of-nodes-in-an-undirected-graph](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2403-count-unreachable-pairs-of-nodes-in-an-undirected-graph) |
 | [2438-find-closest-node-to-given-two-nodes](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2438-find-closest-node-to-given-two-nodes) |
 | [2564-most-profitable-path-in-a-tree](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2564-most-profitable-path-in-a-tree) |
 | [2583-divide-nodes-into-the-maximum-number-of-groups](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2583-divide-nodes-into-the-maximum-number-of-groups) |
@@ -309,6 +311,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1558-course-schedule-iv](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1558-course-schedule-iv) |
 | [2206-detonate-the-maximum-bombs](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2206-detonate-the-maximum-bombs) |
 | [2246-maximum-employees-to-be-invited-to-a-meeting](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2246-maximum-employees-to-be-invited-to-a-meeting) |
+| [2403-count-unreachable-pairs-of-nodes-in-an-undirected-graph](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2403-count-unreachable-pairs-of-nodes-in-an-undirected-graph) |
 | [2438-find-closest-node-to-given-two-nodes](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2438-find-closest-node-to-given-two-nodes) |
 | [2564-most-profitable-path-in-a-tree](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2564-most-profitable-path-in-a-tree) |
 | [2764-maximum-number-of-fish-in-a-grid](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2764-maximum-number-of-fish-in-a-grid) |
@@ -323,6 +326,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0695-max-area-of-island](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0695-max-area-of-island) |
 | [0854-making-a-large-island](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0854-making-a-large-island) |
 | [1396-count-servers-that-communicate](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1396-count-servers-that-communicate) |
+| [2403-count-unreachable-pairs-of-nodes-in-an-undirected-graph](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2403-count-unreachable-pairs-of-nodes-in-an-undirected-graph) |
 | [2583-divide-nodes-into-the-maximum-number-of-groups](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2583-divide-nodes-into-the-maximum-number-of-groups) |
 | [2764-maximum-number-of-fish-in-a-grid](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2764-maximum-number-of-fish-in-a-grid) |
 | [3219-make-lexicographically-smallest-array-by-swapping-elements](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3219-make-lexicographically-smallest-array-by-swapping-elements) |
