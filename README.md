@@ -20,6 +20,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
 | [0128-longest-consecutive-sequence](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0128-longest-consecutive-sequence) |
 | [0135-candy](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0135-candy) |
+| [0152-maximum-product-subarray](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0152-maximum-product-subarray) |
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0153-find-minimum-in-rotated-sorted-array) |
 | [0164-maximum-gap](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0164-maximum-gap) |
 | [0200-number-of-islands](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0200-number-of-islands) |
@@ -428,6 +429,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
 | [0124-binary-tree-maximum-path-sum](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0124-binary-tree-maximum-path-sum) |
+| [0152-maximum-product-subarray](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0152-maximum-product-subarray) |
 | [0213-house-robber-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0213-house-robber-ii) |
 | [0322-coin-change](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0322-coin-change) |
 | [0368-largest-divisible-subset](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0368-largest-divisible-subset) |
