@@ -1,148 +1,243 @@
-# Import required libraries
+"""
+COVID-19 Data Processing Script
+
+This script implements the requested tasks:
+- File existence check and loading
+- Duplicate removal
+- Adding active cases
+- Filtering, severity column via lambda
+- Grouping/aggregation and visualizations
+- Exception handling for numeric conversion
+- Advanced data structures (dicts, tuples, list comprehensions)
+- Saving and validating the processed CSV
+
+Requirements: pandas, matplotlib, seaborn, numpy
+"""
+
 import os
 import pandas as pd
-import keyword
-from statistics import mean
 import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
 
-# Part 1 
-print("Part 1: Keywords, Identifiers, Variables, and Data Types")
 
-# Print all Python keywords
-print("\nPython Keywords:")
-print(keyword.kwlist)
+# ---------------------------
+# Part 1: File Handling and Validation
+# ---------------------------
 
-# Read dataset
-try:
-    data = pd.read_csv('StudentsPerformance.csv')
-    print("\nDataset loaded successfully!")
+DATA_FILE = 'covid_19_clean_complete.csv'
 
-    # Print data types of each col
-    print("\nData Types of Each Column:")
-    print(data.dtypes)
+def load_and_validate(file_path: str) -> pd.DataFrame:
+    """Check file existence, load with pandas, and remove duplicate rows.
 
-    #variables of different types
-    string_var = data['gender'].iloc[0]  # string 
-    integer_var = int(data['math score'].iloc[0])  # integer 
-    float_var = data['math score'].mean()  # float 
+    Raises FileNotFoundError if the file is missing.
+    Returns the cleaned DataFrame.
+    """
+    if not os.path.exists(file_path):
+        raise FileNotFoundError(f"File not found: {file_path}")
 
-    print("\nVariable Types Examples:")
-    print(f"String variable type: {type(string_var)}")
-    print(f"Integer variable type: {type(integer_var)}")
-    print(f"Float variable type: {type(float_var)}")
+    df = pd.read_csv(file_path)
+    print(f"Loaded '{file_path}' with {len(df)} rows and {len(df.columns)} columns.")
 
-    # Part 2
-    print("\nPart 2: Conditional Statements")
+    # Basic validation: remove duplicate rows
+    dup_count = df.duplicated().sum()
+    if dup_count > 0:
+        df = df.drop_duplicates().reset_index(drop=True)
+        print(f"Removed {dup_count} duplicate rows.")
+    else:
+        print("No duplicate rows found.")
 
-    def categorize_math_scores(score):
-        if score >= 80:
-            return "High"
-        elif score >= 50:
-            return "Average"
-        else:
-            return "Low"
+    print("First five rows:")
+    print(df.head())
+    return df
 
-    # Apply function to create new col
-    data['math_category'] = data['math score'].apply(categorize_math_scores)
 
-    # Part 3
-    print("\nPart 3: Control Flow")
-    
-    # Count gender distribution
-    gender_counts = data['gender'].value_counts()
-    print("\nGender Distribution:")
-    print(gender_counts)
+# ---------------------------
+# Part 2: Advanced Functions and Data Manipulation
+# ---------------------------
 
-    # Count high performers
-    total_score = data['math score'] + data['reading score'] + data['writing score']
-    high_performers = len(total_score[total_score > 250])
-    print(f"\nStudents with total score above 250: {high_performers}")
+def add_active_cases(df: pd.DataFrame) -> pd.DataFrame:
+    """Add an 'Active' column: confirmed - (deaths + recovered)."""
+    # Ensure numeric columns are present
+    for col in ['Confirmed', 'Deaths', 'Recovered']:
+        if col not in df.columns:
+            raise KeyError(f"Expected column '{col}' not found in dataframe")
 
-    # Part 4
-    print("\nPart 4: Functions")
+    # coerce to numeric where possible (errors='coerce' will set invalid parsing to NaN)
+    df['Confirmed'] = pd.to_numeric(df['Confirmed'], errors='coerce')
+    df['Deaths'] = pd.to_numeric(df['Deaths'], errors='coerce')
+    df['Recovered'] = pd.to_numeric(df['Recovered'], errors='coerce')
 
-    def average_score(data, subject):
-        return data[subject].mean()
+    df['Active'] = df['Confirmed'] - (df['Deaths'].fillna(0) + df['Recovered'].fillna(0))
+    return df
 
-    # Test the function
-    subjects = ['math score', 'reading score', 'writing score']
-    print("\nAverage Scores:")
-    for subject in subjects:
-        print(f"{subject}: {average_score(data, subject):.2f}")
 
-    # Lambda function to sort by writing score
-    top_writers = data.sort_values(by='writing score', ascending=False).head()
-    print("\nTop 5 Students by Writing Score:")
-    print(top_writers)
+def countries_over_threshold(df: pd.DataFrame, threshold: int = 1_000_000) -> list:
+    """Return list of countries with total confirmed cases above threshold using filter()."""
+    # Aggregate confirmed by country
+    agg = df.groupby('Country/Region', as_index=False)['Confirmed'].sum()
 
-    # Part 5
-    print("\nPart 5: String Methods")
-    unique_education = data['parental level of education'].unique()
-    print("\nUnique Parental Education Levels (Uppercase):")
-    print([level.upper() for level in unique_education])
+    # filter returns an iterator; convert to list
+    filtered_iter = filter(lambda row: row['Confirmed'] > threshold, agg.to_dict('records'))
+    countries = [r['Country/Region'] for r in filtered_iter]
+    return countries
 
-    # Part 6
-    print("\nPart 6: Python Lists")
-    prep_courses = list(data['test preparation course'].unique())
-    print("\nAverage Math Scores by Test Preparation:")
-    for course in prep_courses:
-        avg = data[data['test preparation course'] == course]['math score'].mean()
-        print(f"{course}: {avg:.2f}")
 
-    # Part 7
-    print("\nPart 7: Dictionary Methods")
-    gender_reading_dict = dict(data.groupby('gender')['reading score'].mean())
-    print("\nAverage Reading Score by Gender:")
-    print(gender_reading_dict)
-    print(f"Female average reading score: {gender_reading_dict.get('female'):.2f}")
-
-    # Part 8
-    print("\nPart 8: Tuple Methods")
-    writing_stats = (
-        data['writing score'].min(),
-        data['writing score'].max(),
-        data['writing score'].mean()
+def add_severity_column(df: pd.DataFrame) -> pd.DataFrame:
+    """Add 'severity' column using a lambda function according to confirmed case counts."""
+    df['severity'] = df['Confirmed'].apply(
+        lambda x: 'High' if x > 1_000_000 else ('Moderate' if 100_000 <= x <= 1_000_000 else 'Low')
     )
-    min_score, max_score, avg_score = writing_stats
-    print("\nWriting Score Statistics:")
-    print(f"Minimum: {min_score}")
-    print(f"Maximum: {max_score}")
-    print(f"Average: {avg_score:.2f}")
+    return df
 
-    # Part 9
-    print("\nPart 9: File Handling")
-    data.to_csv('StudentsPerformance_Updated.csv', index=False)
-    print("\nUpdated dataset saved successfully!")
 
-    print("\nFirst 5 lines of updated file:")
-    with open('StudentsPerformance_Updated.csv', 'r') as file:
-        for i, line in enumerate(file):
-            if i < 5:
-                print(line.strip())
+# ---------------------------
+# Part 3: Data Aggregation and Visualization
+# ---------------------------
 
-    # Part 10
-    print("\nPart 10: Exceptions")
-    print("\nDividing Math Score by Reading Score:")
+def aggregate_by_country(df: pd.DataFrame) -> pd.DataFrame:
+    agg = df.groupby('Country/Region', as_index=False).agg(
+        {'Confirmed': 'sum', 'Deaths': 'sum', 'Recovered': 'sum'}
+    )
+    agg = agg.sort_values(by='Confirmed', ascending=False).reset_index(drop=True)
+    print("\nTop 5 countries by total confirmed cases:")
+    print(agg.head(5))
+    return agg
+
+
+def plot_top_countries(agg_df: pd.DataFrame, top_n: int = 10):
+    top = agg_df.head(top_n)
+    plt.figure(figsize=(12, 6))
+    sns.barplot(data=top, x='Confirmed', y='Country/Region', palette='Reds_r')
+    plt.title(f'Top {top_n} Countries by Total Confirmed Cases')
+    plt.xlabel('Total Confirmed')
+    plt.tight_layout()
+    plt.show()
+
+
+def plot_trends_for_country(df: pd.DataFrame, country: str = 'India'):
+    df_country = df[df['Country/Region'] == country].copy()
+    if df_country.empty:
+        print(f"No data found for country: {country}")
+        return
+    # Ensure 'Date' column is datetime
+    if 'Date' in df_country.columns:
+        df_country['Date'] = pd.to_datetime(df_country['Date'], errors='coerce')
+        grouped = df_country.groupby('Date', as_index=True)[['Confirmed', 'Recovered', 'Deaths']].sum()
+        grouped = grouped.sort_index()
+
+        plt.figure(figsize=(12, 6))
+        grouped.plot(kind='line')
+        plt.title(f'Trend of Confirmed/Recovered/Deaths over time - {country}')
+        plt.ylabel('Count')
+        plt.xlabel('Date')
+        plt.tight_layout()
+        plt.show()
+    else:
+        print("No 'Date' column available to plot trends.")
+
+
+# ---------------------------
+# Part 4: Exception Handling
+# ---------------------------
+
+def convert_numeric_columns_to_int(df: pd.DataFrame):
+    numeric_cols = df.select_dtypes(include=[np.number]).columns.tolist()
+    print(f"Attempting to convert numeric columns to int: {numeric_cols}")
+    for col in numeric_cols:
+        try:
+            df[col] = df[col].astype('Int64')  # pandas nullable integer
+        except Exception as e:
+            print(f"Error converting column '{col}' to int: {e}")
+
+
+# ---------------------------
+# Part 5: Advanced Data Structures
+# ---------------------------
+
+def country_deaths_dict(agg_df: pd.DataFrame) -> dict:
+    d = dict(zip(agg_df['Country/Region'], agg_df['Deaths']))
+    return d
+
+
+# ---------------------------
+# Part 6: File Export and Final Output
+# ---------------------------
+
+def save_processed(df: pd.DataFrame, filename: str = 'COVID19_Processed.csv') -> None:
+    df.to_csv(filename, index=False)
+    print(f"Processed data saved to {filename}")
+
+
+def validate_saved_file(processed_df: pd.DataFrame, filename: str = 'COVID19_Processed.csv') -> bool:
+    with open(filename, 'r', encoding='utf-8') as f:
+        lines = [next(f).strip() for _ in range(5)]
+    print("\nFirst 5 lines of saved file:")
+    for l in lines:
+        print(l)
+
+    # Compare with processed_df head (string-wise)
+    saved_head = pd.read_csv(filename).head()
+    equal = saved_head.reset_index(drop=True).equals(processed_df.head().reset_index(drop=True))
+    print(f"\nSaved file matches processed DataFrame head: {equal}")
+    return equal
+
+
+def main():
+    # Load and validate
+    df = load_and_validate(DATA_FILE)
+
+    # Add active cases
+    df = add_active_cases(df)
+
+    # Countries over threshold
+    countries = countries_over_threshold(df, threshold=1_000_000)
+    print(f"\nCountries with total confirmed > 1,000,000: {countries}")
+
+    # Add severity
+    df = add_severity_column(df)
+
+    # Aggregate and plot
+    agg = aggregate_by_country(df)
+    # Plotting - these will open figures when run in an interactive environment
     try:
-        ratio = data['math score'] / data['reading score']
-        print("Division successful!")
-    except ZeroDivisionError:
-        print("Error: Division by zero encountered!")
+        plot_top_countries(agg, top_n=10)
     except Exception as e:
-        print(f"Error: {str(e)}")
+        print(f"Plotting error (bar chart): {e}")
 
-    # Part 11
-    print("\nPart 11: Type Casting")
-    # Convert math scores to strings
-    math_strings = data['math score'].astype(str)
-    # Convert back to integers
-    math_integers = math_strings.astype(int)
+    try:
+        plot_trends_for_country(df, country='India')
+    except Exception as e:
+        print(f"Plotting error (trends): {e}")
 
-    print("\nType Verification (3 values):")
-    for i in range(3):
-        print(f"Value {i+1}: {type(math_integers.iloc[i])}")
+    # Exception handling for numeric conversion
+    convert_numeric_columns_to_int(df)
 
-except FileNotFoundError:
-    print("Error: The StudentsPerformance.csv file was not found in the current directory.")
-except Exception as e:
-    print(f"An error occurred: {str(e)}")
+    # Advanced structures
+    deaths_dict = country_deaths_dict(agg)
+    print(f"\nDeath counts dict sample (5 items): {dict(list(deaths_dict.items())[:5])}")
+    us_deaths = deaths_dict.get('US') or deaths_dict.get('United States') or deaths_dict.get('United States of America')
+    print(f"Deaths for United States (if present): {us_deaths}")
+
+    # Tuple of columns
+    columns_tuple = tuple(df.columns)
+    print(f"\nColumns tuple contains 'Confirmed'? {'Confirmed' in columns_tuple}")
+
+    # List comprehension for death rate > 5%
+    # Avoid division by zero and NaN
+    country_rates = agg.assign(death_rate = agg['Deaths'] / agg['Confirmed'])
+    high_death_countries = [row['Country/Region'] for _, row in country_rates.iterrows() if pd.notna(row['death_rate']) and row['death_rate'] > 0.05]
+    print(f"\nCountries with death rate > 5%: {high_death_countries}")
+
+    # Save and validate
+    save_processed(df, filename='COVID19_Processed.csv')
+    validate_saved_file(df, filename='COVID19_Processed.csv')
+
+
+if __name__ == '__main__':
+    try:
+        main()
+    except FileNotFoundError as fe:
+        print(str(fe))
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
