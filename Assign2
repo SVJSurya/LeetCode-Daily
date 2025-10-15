@@ -1,0 +1,148 @@
+# Import required libraries
+import os
+import pandas as pd
+import keyword
+from statistics import mean
+import numpy as np
+
+# Part 1 
+print("Part 1: Keywords, Identifiers, Variables, and Data Types")
+
+# Print all Python keywords
+print("\nPython Keywords:")
+print(keyword.kwlist)
+
+# Read dataset
+try:
+    data = pd.read_csv('StudentsPerformance.csv')
+    print("\nDataset loaded successfully!")
+
+    # Print data types of each col
+    print("\nData Types of Each Column:")
+    print(data.dtypes)
+
+    #variables of different types
+    string_var = data['gender'].iloc[0]  # string 
+    integer_var = int(data['math score'].iloc[0])  # integer 
+    float_var = data['math score'].mean()  # float 
+
+    print("\nVariable Types Examples:")
+    print(f"String variable type: {type(string_var)}")
+    print(f"Integer variable type: {type(integer_var)}")
+    print(f"Float variable type: {type(float_var)}")
+
+    # Part 2
+    print("\nPart 2: Conditional Statements")
+
+    def categorize_math_scores(score):
+        if score >= 80:
+            return "High"
+        elif score >= 50:
+            return "Average"
+        else:
+            return "Low"
+
+    # Apply function to create new col
+    data['math_category'] = data['math score'].apply(categorize_math_scores)
+
+    # Part 3
+    print("\nPart 3: Control Flow")
+    
+    # Count gender distribution
+    gender_counts = data['gender'].value_counts()
+    print("\nGender Distribution:")
+    print(gender_counts)
+
+    # Count high performers
+    total_score = data['math score'] + data['reading score'] + data['writing score']
+    high_performers = len(total_score[total_score > 250])
+    print(f"\nStudents with total score above 250: {high_performers}")
+
+    # Part 4
+    print("\nPart 4: Functions")
+
+    def average_score(data, subject):
+        return data[subject].mean()
+
+    # Test the function
+    subjects = ['math score', 'reading score', 'writing score']
+    print("\nAverage Scores:")
+    for subject in subjects:
+        print(f"{subject}: {average_score(data, subject):.2f}")
+
+    # Lambda function to sort by writing score
+    top_writers = data.sort_values(by='writing score', ascending=False).head()
+    print("\nTop 5 Students by Writing Score:")
+    print(top_writers)
+
+    # Part 5
+    print("\nPart 5: String Methods")
+    unique_education = data['parental level of education'].unique()
+    print("\nUnique Parental Education Levels (Uppercase):")
+    print([level.upper() for level in unique_education])
+
+    # Part 6
+    print("\nPart 6: Python Lists")
+    prep_courses = list(data['test preparation course'].unique())
+    print("\nAverage Math Scores by Test Preparation:")
+    for course in prep_courses:
+        avg = data[data['test preparation course'] == course]['math score'].mean()
+        print(f"{course}: {avg:.2f}")
+
+    # Part 7
+    print("\nPart 7: Dictionary Methods")
+    gender_reading_dict = dict(data.groupby('gender')['reading score'].mean())
+    print("\nAverage Reading Score by Gender:")
+    print(gender_reading_dict)
+    print(f"Female average reading score: {gender_reading_dict.get('female'):.2f}")
+
+    # Part 8
+    print("\nPart 8: Tuple Methods")
+    writing_stats = (
+        data['writing score'].min(),
+        data['writing score'].max(),
+        data['writing score'].mean()
+    )
+    min_score, max_score, avg_score = writing_stats
+    print("\nWriting Score Statistics:")
+    print(f"Minimum: {min_score}")
+    print(f"Maximum: {max_score}")
+    print(f"Average: {avg_score:.2f}")
+
+    # Part 9
+    print("\nPart 9: File Handling")
+    data.to_csv('StudentsPerformance_Updated.csv', index=False)
+    print("\nUpdated dataset saved successfully!")
+
+    print("\nFirst 5 lines of updated file:")
+    with open('StudentsPerformance_Updated.csv', 'r') as file:
+        for i, line in enumerate(file):
+            if i < 5:
+                print(line.strip())
+
+    # Part 10
+    print("\nPart 10: Exceptions")
+    print("\nDividing Math Score by Reading Score:")
+    try:
+        ratio = data['math score'] / data['reading score']
+        print("Division successful!")
+    except ZeroDivisionError:
+        print("Error: Division by zero encountered!")
+    except Exception as e:
+        print(f"Error: {str(e)}")
+
+    # Part 11
+    print("\nPart 11: Type Casting")
+    # Convert math scores to strings
+    math_strings = data['math score'].astype(str)
+    # Convert back to integers
+    math_integers = math_strings.astype(int)
+
+    print("\nType Verification (3 values):")
+    for i in range(3):
+        print(f"Value {i+1}: {type(math_integers.iloc[i])}")
+
+except FileNotFoundError:
+    print("Error: The StudentsPerformance.csv file was not found in the current directory.")
+except Exception as e:
+    print(f"An error occurred: {str(e)}")
