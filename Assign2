@@ -1,200 +1,165 @@
 """
-World Happiness Report 2019 Analysis using NumPy
-This script processes and analyzes the 2019 World Happiness Report data
-using NumPy for efficient numerical computations.
+World Happiness Report Analysis
+This script performs data analysis on the World Happiness Report dataset using pandas.
+It includes data loading, cleaning, analysis, and visualization.
 """
 
+import pandas as pd
 import numpy as np
-import time
-from timeit import default_timer as timer
+import matplotlib.pyplot as plt
+import seaborn as sns
 
-def load_and_validate_data(filename='2019.csv'):
-    """Load and validate the happiness report data."""
+def load_and_explore_data(filepath='world_happiness_report.csv'):
+    """Load and perform initial data exploration."""
     try:
-        # Load data using numpy's genfromtxt to handle CSV
-        # Skip header row (1) and use comma delimiter
-        data = np.genfromtxt(filename, delimiter=',', skip_header=1, 
-                            dtype=None, encoding='utf-8', missing_values='',
-                            filling_values=np.nan)
+        # Load the dataset
+        df = pd.read_csv(filepath)
+        print("Dataset loaded successfully!")
+        print("\nFirst 10 rows of the dataset:")
+        print(df.head(10))
         
-        print(f"\nData loaded successfully from {filename}")
-        print(f"Shape: {data.shape}")
-        print(f"Size: {data.size}")
-        print(f"Data type: {data.dtype}")
+        # Check missing values
+        print("\nMissing values in each column:")
+        print(df.isnull().sum())
         
-        return data
+        # Display dataset info
+        print("\nDataset Information:")
+        print(df.info())
+        
+        # Display summary statistics
+        print("\nSummary Statistics:")
+        print(df.describe())
+        
+        return df
+        
     except FileNotFoundError:
-        print(f"Error: File '{filename}' not found in current directory.")
+        print(f"Error: {filepath} not found in the current directory.")
         return None
     except Exception as e:
-        print(f"Error loading data: {str(e)}")
+        print(f"An error occurred: {str(e)}")
         return None
 
-def extract_numeric_columns(data):
-    """Extract numeric columns from the dataset."""
-    try:
-        # Assuming columns are in this order in the CSV
-        score = data['Score'].astype(float)
-        gdp = data['GDP per capita'].astype(float)
-        health = data['Healthy life expectancy'].astype(float)
-        freedom = data['Freedom to make life choices'].astype(float)
-        
-        return score, gdp, health, freedom
-    except Exception as e:
-        print(f"Error extracting columns: {str(e)}")
-        return None, None, None, None
-
-def compute_basic_stats(score):
-    """Compute basic statistics for the Score column."""
-    return {
-        'mean': np.mean(score),
-        'median': np.median(score),
-        'std': np.std(score)
-    }
-
-def find_gdp_extremes(data, gdp):
-    """Find countries with min/max GDP."""
-    min_idx = np.argmin(gdp)
-    max_idx = np.argmax(gdp)
-    return {
-        'min_country': data['Country or region'][min_idx],
-        'min_gdp': gdp[min_idx],
-        'max_country': data['Country or region'][max_idx],
-        'max_gdp': gdp[max_idx]
-    }
-
-def filter_happy_countries(data, score, threshold=7.0):
-    """Filter countries with score above threshold."""
-    happy_mask = score > threshold
-    return data[happy_mask]
-
-def find_top_health_countries(data, health, n=5):
-    """Find top N countries by health expectancy."""
-    top_indices = np.argsort(health)[-n:][::-1]
-    return data['Country or region'][top_indices], health[top_indices]
-
-def sort_by_freedom(data, freedom):
-    """Sort countries by freedom score."""
-    sorted_indices = np.argsort(freedom)[::-1]
-    return data[sorted_indices][:10]
-
-def compute_correlation(gdp, score):
-    """Compute correlation between GDP and Score."""
-    return np.corrcoef(gdp, score)[0, 1]
-
-def normalize_column(column):
-    """Normalize column to 0-1 range."""
-    min_val = np.min(column)
-    max_val = np.max(column)
-    return (column - min_val) / (max_val - min_val)
-
-def categorize_happiness(data, score):
-    """Group countries by happiness level and compute mean GDP."""
-    high_mask = score >= 7.0
-    medium_mask = (score >= 5.0) & (score < 7.0)
-    low_mask = score < 5.0
+def clean_and_preprocess(df):
+    """Clean the dataset and create new features."""
+    if df is None:
+        return None
     
-    categories = {
-        'high': data[high_mask],
-        'medium': data[medium_mask],
-        'low': data[low_mask]
-    }
-    return categories
+    # Fill missing values with column means
+    columns_to_fill = ['GDP per capita', 'Social support', 
+                       'Healthy life expectancy', 'Freedom to make life choices']
+    
+    for column in columns_to_fill:
+        if column in df.columns:
+            df[column] = df[column].fillna(df[column].mean())
+    
+    # Drop rows with missing Country
+    if 'Country' in df.columns:
+        df = df.dropna(subset=['Country'])
+    
+    print("Missing values after cleaning:")
+    print(df.isnull().sum())
+    
+    # Feature Engineering
+    if 'Score' in df.columns:
+        df['Happiness_Index'] = (df['Score'] - df['Score'].min()) / \
+                               (df['Score'].max() - df['Score'].min())
+    
+    if 'GDP per capita' in df.columns:
+        df['GDP_per_Capita_Category'] = pd.cut(
+            df['GDP per capita'],
+            bins=[-np.inf, 0.5, 1.0, np.inf],
+            labels=['Low', 'Medium', 'High']
+        )
+    
+    return df
+
+def analyze_happiness_scores(df):
+    """Analyze happiness scores and GDP relationship."""
+    if df is None:
+        return
+    
+    if 'Score' in df.columns and 'Country' in df.columns:
+        print("\nTop 10 Happiest Countries:")
+        print(df.nlargest(10, 'Score')[['Country', 'Score', 'GDP per capita']])
+        
+        print("\nBottom 10 Countries by Happiness Score:")
+        print(df.nsmallest(10, 'Score')[['Country', 'Score', 'GDP per capita']])
+    
+    # Create scatter plot
+    if 'GDP per capita' in df.columns and 'Score' in df.columns:
+        plt.figure(figsize=(10, 6))
+        plt.scatter(df['GDP per capita'], df['Score'], alpha=0.5)
+        plt.xlabel('GDP per capita')
+        plt.ylabel('Happiness Score')
+        plt.title('GDP per capita vs. Happiness Score')
+        
+        # Calculate and display correlation
+        correlation = df['GDP per capita'].corr(df['Score'])
+        plt.text(0.05, 0.95, f'Correlation: {correlation:.2f}', 
+                transform=plt.gca().transAxes)
+        plt.show()
+
+def perform_advanced_operations(df):
+    """Perform advanced pandas operations like sorting and ranking."""
+    if df is None:
+        return
+    
+    if 'Score' in df.columns:
+        print("\nTop 10 Countries by Score (sorted):")
+        print(df.sort_values('Score', ascending=False)
+              .head(10)[['Country', 'Score']])
+
+        # Create rank column
+        df['Rank'] = df['Score'].rank(ascending=False)
+        
+        print("\nFirst 10 countries with their ranks:")
+        print(df[['Country', 'Score', 'Rank']].head(10))
+    
+    return df
+
+def save_and_verify(df, output_file='Cleaned_Happiness_Report.csv'):
+    """Save the processed dataset and verify the output."""
+    if df is None:
+        return
+    
+    # Save the cleaned dataset
+    df.to_csv(output_file, index=False)
+    print(f"\nDataset saved to {output_file}")
+
+    # Verify the saved file
+    print("\nVerifying saved file:")
+    df_verified = pd.read_csv(output_file)
+    print("\nFirst 5 rows of the saved file:")
+    print(df_verified.head())
+
+    # Compare shapes
+    print("\nShape comparison:")
+    print(f"Original shape: {df.shape}")
+    print(f"Saved file shape: {df_verified.shape}")
+
+    # Verify columns
+    print("\nAll columns preserved:", 
+          set(df.columns) == set(df_verified.columns))
 
 def main():
-    # Part 1: Data Loading and Preprocessing
-    data = load_and_validate_data()
-    if data is None:
-        return
+    # Set display options
+    pd.set_option('display.max_columns', None)
+    pd.set_option('display.float_format', lambda x: '%.3f' % x)
     
-    # Extract numeric columns
-    score, gdp, health, freedom = extract_numeric_columns(data)
-    if score is None:
-        return
+    # Load and explore data
+    df = load_and_explore_data()
     
-    # Part 2: Basic Operations
-    stats = compute_basic_stats(score)
-    print("\nScore Statistics:")
-    print(f"Mean: {stats['mean']:.3f}")
-    print(f"Median: {stats['median']:.3f}")
-    print(f"Standard Deviation: {stats['std']:.3f}")
+    # Clean and preprocess
+    df = clean_and_preprocess(df)
     
-    gdp_extremes = find_gdp_extremes(data, gdp)
-    print("\nGDP Extremes:")
-    print(f"Lowest GDP: {gdp_extremes['min_country']} ({gdp_extremes['min_gdp']:.3f})")
-    print(f"Highest GDP: {gdp_extremes['max_country']} ({gdp_extremes['max_gdp']:.3f})")
+    # Analyze happiness scores
+    analyze_happiness_scores(df)
     
-    # Part 3: Filtering and Sorting
-    happy_countries = filter_happy_countries(data, score)
-    print("\nCountries with Score > 7.0:")
-    for country in happy_countries['Country or region']:
-        print(country)
+    # Perform advanced operations
+    df = perform_advanced_operations(df)
     
-    top_health_countries, top_health_values = find_top_health_countries(data, health)
-    print("\nTop 5 Countries by Health Expectancy:")
-    for country, value in zip(top_health_countries, top_health_values):
-        print(f"{country}: {value:.3f}")
-    
-    # Freedom sorting
-    top_freedom = sort_by_freedom(data, freedom)
-    print("\nTop 10 Countries by Freedom Score:")
-    for country, f_score in zip(top_freedom['Country or region'], top_freedom['Freedom to make life choices']):
-        print(f"{country}: {f_score:.3f}")
-    
-    # Part 4: Advanced Calculations
-    correlation = compute_correlation(gdp, score)
-    print(f"\nCorrelation between GDP and Score: {correlation:.3f}")
-    
-    normalized_health = normalize_column(health)
-    print("\nFirst 10 Normalized Health Values:")
-    for country, value in zip(data['Country or region'][:10], normalized_health[:10]):
-        print(f"{country}: {value:.3f}")
-    
-    # Categorize countries
-    categories = categorize_happiness(data, score)
-    for category, cat_data in categories.items():
-        mean_gdp = np.mean(cat_data['GDP per capita'])
-        print(f"\n{category.title()} Happiness Category (n={len(cat_data)}):")
-        print(f"Mean GDP: {mean_gdp:.3f}")
-    
-    # Part 5: Save and Verify Data
-    try:
-        # Add normalized health to data and save
-        output_data = np.column_stack((data, normalized_health))
-        np.savetxt('Happiness_Normalized.csv', output_data, delimiter=',',
-                   fmt='%s', header='Original data,Normalized Health')
-        print("\nData saved to Happiness_Normalized.csv")
-        
-        # Verify saved data
-        loaded_data = np.genfromtxt('Happiness_Normalized.csv', delimiter=',', skip_header=1)
-        print(f"\nVerification - Loaded data shape: {loaded_data.shape}")
-    except Exception as e:
-        print(f"Error saving/loading data: {str(e)}")
-    
-    # Part 6: Performance Comparison
-    def python_loop():
-        return [s * s for s in score]
-    
-    def numpy_vectorized():
-        return np.square(score)
-    
-    # Time comparison
-    n_iterations = 1000
-    
-    python_time = timer()
-    for _ in range(n_iterations):
-        python_loop()
-    python_time = timer() - python_time
-    
-    numpy_time = timer()
-    for _ in range(n_iterations):
-        numpy_vectorized()
-    numpy_time = timer() - numpy_time
-    
-    print(f"\nPerformance Comparison ({n_iterations} iterations):")
-    print(f"Python loop time: {python_time:.6f} seconds")
-    print(f"NumPy vectorized time: {numpy_time:.6f} seconds")
-    print(f"Speed improvement: {python_time/numpy_time:.1f}x faster with NumPy")
+    # Save and verify
+    save_and_verify(df)
 
 if __name__ == "__main__":
     main()
