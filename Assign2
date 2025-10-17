@@ -1,165 +1,200 @@
 """
-NumPy Array Operations and Analysis
-This script demonstrates various NumPy operations including:
-- Array creation and manipulation
-- Mathematical and statistical operations
-- Linear algebra
-- Data simulation and timing comparisons
+World Happiness Report 2019 Analysis using NumPy
+This script processes and analyzes the 2019 World Happiness Report data
+using NumPy for efficient numerical computations.
 """
 
 import numpy as np
 import time
 from timeit import default_timer as timer
 
-# Part 1: Array Creation
-print("Part 1: Array Creation")
-print("-" * 50)
+def load_and_validate_data(filename='2019.csv'):
+    """Load and validate the happiness report data."""
+    try:
+        # Load data using numpy's genfromtxt to handle CSV
+        # Skip header row (1) and use comma delimiter
+        data = np.genfromtxt(filename, delimiter=',', skip_header=1, 
+                            dtype=None, encoding='utf-8', missing_values='',
+                            filling_values=np.nan)
+        
+        print(f"\nData loaded successfully from {filename}")
+        print(f"Shape: {data.shape}")
+        print(f"Size: {data.size}")
+        print(f"Data type: {data.dtype}")
+        
+        return data
+    except FileNotFoundError:
+        print(f"Error: File '{filename}' not found in current directory.")
+        return None
+    except Exception as e:
+        print(f"Error loading data: {str(e)}")
+        return None
 
-# 1D array from 1 to 20
-arr_1d = np.arange(1, 21)
-print("1D Array:")
-print(arr_1d)
-print(f"Shape: {arr_1d.shape}, Size: {arr_1d.size}, dtype: {arr_1d.dtype}\n")
+def extract_numeric_columns(data):
+    """Extract numeric columns from the dataset."""
+    try:
+        # Assuming columns are in this order in the CSV
+        score = data['Score'].astype(float)
+        gdp = data['GDP per capita'].astype(float)
+        health = data['Healthy life expectancy'].astype(float)
+        freedom = data['Freedom to make life choices'].astype(float)
+        
+        return score, gdp, health, freedom
+    except Exception as e:
+        print(f"Error extracting columns: {str(e)}")
+        return None, None, None, None
 
-# 2D random array
-arr_2d = np.random.randint(10, 51, size=(3, 4))
-print("2D Random Array:")
-print(arr_2d)
-print(f"Shape: {arr_2d.shape}, Size: {arr_2d.size}, dtype: {arr_2d.dtype}\n")
+def compute_basic_stats(score):
+    """Compute basic statistics for the Score column."""
+    return {
+        'mean': np.mean(score),
+        'median': np.median(score),
+        'std': np.std(score)
+    }
 
-# 3x3 identity matrix
-identity_matrix = np.eye(3)
-print("3x3 Identity Matrix:")
-print(identity_matrix)
-print(f"Shape: {identity_matrix.shape}, Size: {identity_matrix.size}, dtype: {identity_matrix.dtype}\n")
+def find_gdp_extremes(data, gdp):
+    """Find countries with min/max GDP."""
+    min_idx = np.argmin(gdp)
+    max_idx = np.argmax(gdp)
+    return {
+        'min_country': data['Country or region'][min_idx],
+        'min_gdp': gdp[min_idx],
+        'max_country': data['Country or region'][max_idx],
+        'max_gdp': gdp[max_idx]
+    }
 
-# Part 2: Array Indexing and Slicing
-print("\nPart 2: Array Indexing and Slicing")
-print("-" * 50)
+def filter_happy_countries(data, score, threshold=7.0):
+    """Filter countries with score above threshold."""
+    happy_mask = score > threshold
+    return data[happy_mask]
 
-print("Second row of 2D array:")
-print(arr_2d[1])
+def find_top_health_countries(data, health, n=5):
+    """Find top N countries by health expectancy."""
+    top_indices = np.argsort(health)[-n:][::-1]
+    return data['Country or region'][top_indices], health[top_indices]
 
-print("\nFirst two columns of 2D array:")
-print(arr_2d[:, :2])
+def sort_by_freedom(data, freedom):
+    """Sort countries by freedom score."""
+    sorted_indices = np.argsort(freedom)[::-1]
+    return data[sorted_indices][:10]
 
-print("\nLast element of 1D array:")
-print(arr_1d[-1])
+def compute_correlation(gdp, score):
+    """Compute correlation between GDP and Score."""
+    return np.corrcoef(gdp, score)[0, 1]
 
-# Part 3: Mathematical Operations
-print("\nPart 3: Mathematical Operations")
-print("-" * 50)
+def normalize_column(column):
+    """Normalize column to 0-1 range."""
+    min_val = np.min(column)
+    max_val = np.max(column)
+    return (column - min_val) / (max_val - min_val)
 
-# Element-wise operations
-arr1 = np.array([1, 2, 3, 4, 5])
-arr2 = np.array([5, 4, 3, 2, 1])
+def categorize_happiness(data, score):
+    """Group countries by happiness level and compute mean GDP."""
+    high_mask = score >= 7.0
+    medium_mask = (score >= 5.0) & (score < 7.0)
+    low_mask = score < 5.0
+    
+    categories = {
+        'high': data[high_mask],
+        'medium': data[medium_mask],
+        'low': data[low_mask]
+    }
+    return categories
 
-print("Array 1:", arr1)
-print("Array 2:", arr2)
-print("\nAddition:", arr1 + arr2)
-print("Multiplication:", arr1 * arr2)
-print("Square of arr1:", np.square(arr1))
+def main():
+    # Part 1: Data Loading and Preprocessing
+    data = load_and_validate_data()
+    if data is None:
+        return
+    
+    # Extract numeric columns
+    score, gdp, health, freedom = extract_numeric_columns(data)
+    if score is None:
+        return
+    
+    # Part 2: Basic Operations
+    stats = compute_basic_stats(score)
+    print("\nScore Statistics:")
+    print(f"Mean: {stats['mean']:.3f}")
+    print(f"Median: {stats['median']:.3f}")
+    print(f"Standard Deviation: {stats['std']:.3f}")
+    
+    gdp_extremes = find_gdp_extremes(data, gdp)
+    print("\nGDP Extremes:")
+    print(f"Lowest GDP: {gdp_extremes['min_country']} ({gdp_extremes['min_gdp']:.3f})")
+    print(f"Highest GDP: {gdp_extremes['max_country']} ({gdp_extremes['max_gdp']:.3f})")
+    
+    # Part 3: Filtering and Sorting
+    happy_countries = filter_happy_countries(data, score)
+    print("\nCountries with Score > 7.0:")
+    for country in happy_countries['Country or region']:
+        print(country)
+    
+    top_health_countries, top_health_values = find_top_health_countries(data, health)
+    print("\nTop 5 Countries by Health Expectancy:")
+    for country, value in zip(top_health_countries, top_health_values):
+        print(f"{country}: {value:.3f}")
+    
+    # Freedom sorting
+    top_freedom = sort_by_freedom(data, freedom)
+    print("\nTop 10 Countries by Freedom Score:")
+    for country, f_score in zip(top_freedom['Country or region'], top_freedom['Freedom to make life choices']):
+        print(f"{country}: {f_score:.3f}")
+    
+    # Part 4: Advanced Calculations
+    correlation = compute_correlation(gdp, score)
+    print(f"\nCorrelation between GDP and Score: {correlation:.3f}")
+    
+    normalized_health = normalize_column(health)
+    print("\nFirst 10 Normalized Health Values:")
+    for country, value in zip(data['Country or region'][:10], normalized_health[:10]):
+        print(f"{country}: {value:.3f}")
+    
+    # Categorize countries
+    categories = categorize_happiness(data, score)
+    for category, cat_data in categories.items():
+        mean_gdp = np.mean(cat_data['GDP per capita'])
+        print(f"\n{category.title()} Happiness Category (n={len(cat_data)}):")
+        print(f"Mean GDP: {mean_gdp:.3f}")
+    
+    # Part 5: Save and Verify Data
+    try:
+        # Add normalized health to data and save
+        output_data = np.column_stack((data, normalized_health))
+        np.savetxt('Happiness_Normalized.csv', output_data, delimiter=',',
+                   fmt='%s', header='Original data,Normalized Health')
+        print("\nData saved to Happiness_Normalized.csv")
+        
+        # Verify saved data
+        loaded_data = np.genfromtxt('Happiness_Normalized.csv', delimiter=',', skip_header=1)
+        print(f"\nVerification - Loaded data shape: {loaded_data.shape}")
+    except Exception as e:
+        print(f"Error saving/loading data: {str(e)}")
+    
+    # Part 6: Performance Comparison
+    def python_loop():
+        return [s * s for s in score]
+    
+    def numpy_vectorized():
+        return np.square(score)
+    
+    # Time comparison
+    n_iterations = 1000
+    
+    python_time = timer()
+    for _ in range(n_iterations):
+        python_loop()
+    python_time = timer() - python_time
+    
+    numpy_time = timer()
+    for _ in range(n_iterations):
+        numpy_vectorized()
+    numpy_time = timer() - numpy_time
+    
+    print(f"\nPerformance Comparison ({n_iterations} iterations):")
+    print(f"Python loop time: {python_time:.6f} seconds")
+    print(f"NumPy vectorized time: {numpy_time:.6f} seconds")
+    print(f"Speed improvement: {python_time/numpy_time:.1f}x faster with NumPy")
 
-# Statistical Operations
-random_5x5 = np.random.rand(5, 5)
-print("\n5x5 Random Array:")
-print(random_5x5)
-
-print(f"\nMean: {np.mean(random_5x5):.4f}")
-print(f"Median: {np.median(random_5x5):.4f}")
-print(f"Standard Deviation: {np.std(random_5x5):.4f}")
-
-max_val = np.max(random_5x5)
-min_val = np.min(random_5x5)
-max_idx = np.unravel_index(np.argmax(random_5x5), random_5x5.shape)
-min_idx = np.unravel_index(np.argmin(random_5x5), random_5x5.shape)
-
-print(f"\nMaximum value: {max_val:.4f} at index {max_idx}")
-print(f"Minimum value: {min_val:.4f} at index {min_idx}")
-
-# Reshaping and Transposing
-print("\nReshaping and Transposing")
-print("-" * 50)
-
-arr_16 = np.arange(1, 17)
-matrix_4x4 = arr_16.reshape(4, 4)
-print("Original 4x4 Matrix:")
-print(matrix_4x4)
-print("\nTransposed Matrix:")
-print(matrix_4x4.T)
-
-# Broadcasting
-print("\nBroadcasting Example")
-print("-" * 50)
-
-ones_3x3 = np.ones((3, 3))
-broadcast_arr = np.array([1, 2, 3])
-result = ones_3x3 * broadcast_arr
-print("Broadcasting Result:")
-print(result)
-
-# Linear Algebra
-print("\nPart 4: Linear Algebra")
-print("-" * 50)
-
-A = np.array([[1, 2], [3, 4]])
-B = np.array([[2, 0], [1, 3]])
-
-print("Matrix A:")
-print(A)
-print("\nMatrix B:")
-print(B)
-
-print("\nMatrix Multiplication (A @ B):")
-print(np.matmul(A, B))
-
-det_A = np.linalg.det(A)
-print(f"\nDeterminant of A: {det_A:.4f}")
-
-if det_A != 0:
-    inv_A = np.linalg.inv(A)
-    print("\nInverse of A:")
-    print(inv_A)
-else:
-    print("\nMatrix A is not invertible")
-
-# Data Simulation
-print("\nPart 5: Data Simulation")
-print("-" * 50)
-
-exam_scores = np.random.uniform(50, 100, 100)
-print(f"Average Score: {np.mean(exam_scores):.2f}")
-print(f"Percentage above 75: {np.mean(exam_scores > 75) * 100:.2f}%")
-
-# File Handling
-print("\nPart 6: File Handling")
-print("-" * 50)
-
-# Save scores to file
-np.save('scores.npy', exam_scores)
-loaded_scores = np.load('scores.npy')
-print("Verification - First 5 scores from loaded data:")
-print(loaded_scores[:5])
-
-# Vectorization Comparison
-print("\nPart 7: Vectorization Comparison")
-print("-" * 50)
-
-def python_squares():
-    return [i ** 2 for i in range(1, 10001)]
-
-def numpy_squares():
-    return np.square(np.arange(1, 10001))
-
-# Time comparison
-start = timer()
-python_result = python_squares()
-python_time = timer() - start
-
-start = timer()
-numpy_result = numpy_squares()
-numpy_time = timer() - start
-
-print(f"Python list comprehension time: {python_time:.6f} seconds")
-print(f"NumPy vectorization time: {numpy_time:.6f} seconds")
-print(f"NumPy is {python_time/numpy_time:.2f}x faster")
+if __name__ == "__main__":
+    main()
