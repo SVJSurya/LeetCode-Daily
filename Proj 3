@@ -144,19 +144,3 @@ if __name__ == "__main__":
     print("\n--- Sample Employee Details ---")
     for emp in system.employees:
         print(emp.get_details())
-
-
-
-/* Created a sample employee dataset with different types of employees (regular, managers, and contract employees)
-Demonstrated OOP concepts:
-Inheritance (Manager and ContractEmployee inherit from Employee)
-Encapsulation (private salary attribute)
-Polymorphism (overridden methods in derived classes)
-Abstraction (BaseEmployee abstract class)
-Generated a data file with employee records
-The analysis script ran with some warnings (which are not errors, just deprecation notices from seaborn), and should have created visualizations showing:
-
-Distribution of educational qualifications
-Length of service across different cities
-Correlation between payment tier and experience
-Gender distribution in the workforce */
