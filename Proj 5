@@ -1,0 +1,114 @@
+import pandas as pd
+import numpy as np
+
+# --- 0. Data Creation (Synthetic Dataset) ---
+# In a real-world scenario, you would load this from a CSV file.
+# e.g., movies_df = pd.read_csv('your_movie_dataset.csv')
+print("--- Step 0: Creating Synthetic Data ---")
+
+data = {
+    'id': [1, 2, 3, 4, 5, 2], # Intentionally added a duplicate ID
+    'title': ['Movie A', 'Movie B', 'Movie C', 'Movie D', 'Movie E', 'Movie B'],
+    'genre': ['Action', 'Comedy', 'Action', 'Drama', 'Comedy', 'Comedy'],
+    'release_date': ['2021-05-20', '2020-11-15', '2021-05-21', 'not available', '2019-07-30', '2020-11-15'],
+    'budget': [200000000, 150000000, 0, 180000000, 120000000, 150000000],
+    'revenue': [500000000, 350000000, 450000000, 400000000, 0, 350000000],
+    'runtime': [150.0, 120.0, 140.0, np.nan, 110.0, 120.0],
+    'vote_average': ['7.5', '8.1', '7.0', '8.5', '6.9', '8.1'],
+    'vote_count': [10000, 12000, 9000, 15000, 8000, 12000],
+    'homepage': ['http://moviea.com', np.nan, 'http://moviec.com', np.nan, 'http://moviee.com', np.nan],
+    'tagline': ['A tagline for A', 'A tagline for B', np.nan, 'A tagline for D', np.nan, 'A tagline for B']
+}
+movies_df = pd.DataFrame(data)
+
+print("Synthetic data created.")
+# Warn if there are duplicate IDs
+if movies_df['id'].duplicated().any():
+    dup_ids = movies_df[movies_df['id'].duplicated()]['id'].tolist()
+    print(f"Warning: Duplicate id values found: {set(dup_ids)}")
+print("\n" + "="*50 + "\n")
+
+# --- 1. Data Loading and Cleaning ---
+print("--- Step 1: Initial Data Inspection ---")
+
+print("DataFrame Head:")
+print(movies_df.head())
+
+print("\nDataFrame Info (Data Types and Non-Null Counts):")
+movies_df.info()
+
+print("\n" + "="*50 + "\n")
+
+
+print("--- Step 2: Handling Duplicates ---")
+# Check for duplicate rows
+num_duplicates = movies_df.duplicated().sum()
+print(f"Number of duplicate rows found: {num_duplicates}")
+
+# Remove duplicate rows (keep first occurrence)
+movies_df = movies_df.drop_duplicates(keep='first')
+print("Duplicate rows have been removed (kept first occurrences).")
+print(f"Shape of DataFrame after dropping duplicates: {movies_df.shape}")
+
+print("\n" + "="*50 + "\n")
+
+
+print("--- Step 3: Correcting Data Types ---")
+# The 'release_date' is an object, 'vote_average' is an object. They need correction.
+# The 'budget' and 'revenue' are integers which might be okay, but let's be explicit.
+
+# Convert release_date to datetime, coercing errors to NaT (Not a Time)
+movies_df['release_date'] = pd.to_datetime(movies_df['release_date'], errors='coerce')
+
+# Convert vote_average to a numeric type (float)
+movies_df['vote_average'] = pd.to_numeric(movies_df['vote_average'])
+
+# Ensure budget and revenue are numeric
+movies_df['budget'] = pd.to_numeric(movies_df['budget'])
+movies_df['revenue'] = pd.to_numeric(movies_df['revenue'])
+
+
+print("Data types after conversion:")
+movies_df.info()
+
+print("\n" + "="*50 + "\n")
+
+
+print("--- Step 4: Handling Missing & Inappropriate Data ---")
+# Some movies have 0 for budget or revenue, which is often missing data in disguise.
+# Let's replace 0s with NaN to handle them consistently.
+movies_df['budget'] = movies_df['budget'].replace(0, np.nan)
+movies_df['revenue'] = movies_df['revenue'].replace(0, np.nan)
+
+print("Missing values before handling:")
+print(movies_df.isnull().sum())
+
+# Strategy 1: Drop columns that are not useful or have too many missing values
+# 'homepage' and 'tagline' are often not used in analysis.
+movies_df.drop(columns=['homepage', 'tagline'], inplace=True)
+print("\nDropped 'homepage' and 'tagline' columns.")
+
+# Strategy 2: Impute (fill) missing numerical data
+# We'll use the median because it's less sensitive to outliers than the mean.
+for col in ['budget', 'revenue', 'runtime']:
+    median_val = movies_df[col].median()
+    movies_df[col] = movies_df[col].fillna(median_val)
+    print(f"Filled missing values in '{col}' with median value: {median_val}")
+
+# Strategy 3: Drop rows where critical information is missing
+# A movie without a release date might not be useful for time-based analysis.
+movies_df = movies_df.dropna(subset=['release_date'])
+print("\nDropped rows with missing 'release_date'.")
+
+
+print("\n--- Final Check: Cleaned Data ---")
+print("Missing values after handling:")
+print(movies_df.isnull().sum())
+
+print("\nFinal DataFrame Info:")
+movies_df.info()
+
+print("\nFinal DataFrame Head:")
+print(movies_df.head())
+
+print("\nData cleaning is complete!")
