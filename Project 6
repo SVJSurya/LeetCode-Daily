@@ -1,0 +1,130 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import io
+
+# -- Sample Dataset --
+# In a real-world scenario, you would load this from a CSV file like:
+# df = pd.read_csv('sales_data.csv')
+# For this example, we'll create a dataset from a string.
+
+data = """OrderID,Date,Category,Product,Sales,Cost,Country,Device
+101,2024-01-15,Electronics,Laptop,1200,950,USA,Desktop
+102,2024-01-17,Clothing,T-Shirt,25,10,Canada,Mobile
+103,2024-02-05,Electronics,Smartphone,800,600,USA,Mobile
+104,2024-02-12,Home Goods,Coffee Maker,150,110,UK,Desktop
+105,2024-03-10,Clothing,Jeans,75,40,USA,Mobile
+106,2024-03-22,Electronics,Headphones,120,80,Germany,Tablet
+107,2024-04-05,Books,Python Intro,45,20,Canada,Desktop
+108,2024-04-19,Home Goods,Blender,90,65,USA,Mobile
+109,2024-05-14,Electronics,Laptop,1250,980,UK,Desktop
+110,2024-05-21,Clothing,Jacket,150,90,Germany,Mobile
+111,2024-06-11,Books,Data Science,60,30,USA,Tablet
+112,2024-06-25,Home Goods,Toaster,40,25,Canada,Mobile
+113,2024-07-08,Electronics,Smartphone,850,620,USA,Mobile
+114,2024-07-13,Clothing,T-Shirt,30,12,UK,Desktop
+115,2024-08-16,Electronics,Headphones,130,85,Germany,Tablet
+115,2024-08-16,Electronics,Headphones,130,85,Germany,Tablet
+116,2024-08-29,Books,Python Intro,45,20,USA,Desktop
+117,2024-09-01,,,200,150,USA,Desktop
+118,2024-09-22,Home Goods,Coffee Maker,160,115,Canada,Mobile
+"""
+
+# 1. DATA LOADING AND CLEANING
+print("### 1. Data Loading and Cleaning ###")
+
+# Load the data from the string into a pandas DataFrame
+df = pd.read_csv(io.StringIO(data))
+
+# Display initial info
+print("\n--- Initial Data Info ---")
+df.info()
+
+# Display summary statistics
+print("\n--- Summary Statistics ---")
+print(df.describe())
+
+# Handle missing values (e.g., fill with 'Unknown' or drop)
+print(f"\nMissing values before handling:\n{df.isnull().sum()}")
+# For this example, we'll drop rows with any missing values
+df.dropna(inplace=True)
+print(f"\nMissing values after handling:\n{df.isnull().sum()}")
+
+
+# Remove duplicate rows
+print(f"\nNumber of duplicate rows before handling: {df.duplicated().sum()}")
+df.drop_duplicates(inplace=True)
+print(f"Number of duplicate rows after handling: {df.duplicated().sum()}")
+
+# Convert 'Date' column to datetime objects
+df['Date'] = pd.to_datetime(df['Date'])
+
+print("\n--- Cleaned Data Head ---")
+print(df.head())
+print("-" * 30)
+
+# 2. DATA MANIPULATION
+print("\n### 2. Data Manipulation ###")
+
+# Group data by product category and calculate total sales
+category_sales = df.groupby('Category')['Sales'].sum().reset_index()
+print("\n--- Total Sales by Category ---")
+print(category_sales)
+
+# Add a calculated column for Profit Margin: (Sales - Cost) / Sales
+df['ProfitMargin'] = ((df['Sales'] - df['Cost']) / df['Sales']) * 100
+print("\n--- Data with Profit Margin Column ---")
+print(df.head())
+print("-" * 30)
+
+
+# 3. VISUALIZATION
+print("\n### 3. Creating Visualizations ###")
+
+# Set a style for the plots
+sns.set_style("whitegrid")
+plt.figure(figsize=(18, 12)) # Create a figure to hold all subplots
+
+# --- Plot 1: Line Chart for Sales Trends ---
+plt.subplot(2, 3, 1) # (rows, columns, plot_number)
+monthly_sales = df.set_index('Date').resample('M')['Sales'].sum()
+plt.plot(monthly_sales.index.to_numpy(), monthly_sales.to_numpy(), marker='o', linestyle='-')
+plt.title('Monthly Sales Trend')
+plt.xlabel('Month')
+plt.ylabel('Total Sales')
+plt.xticks(rotation=45)
+
+# --- Plot 2: Boxplot for Sales Distribution by Category ---
+plt.subplot(2, 3, 2)
+sns.boxplot(x='Category', y='Sales', data=df)
+plt.title('Sales Distribution by Category')
+plt.xlabel('Product Category')
+plt.ylabel('Sales')
+
+# --- Plot 3: Bar Chart for Device Usage ---
+plt.subplot(2, 3, 3)
+sns.countplot(x='Device', data=df, palette='viridis', order = df['Device'].value_counts().index)
+plt.title('Customer Devices Used for Purchases')
+plt.xlabel('Device Type')
+plt.ylabel('Number of Purchases')
+
+# --- Plot 4: Bar Chart for Countries with Most Purchases ---
+plt.subplot(2, 3, 4)
+top_countries = df['Country'].value_counts().nlargest(5)
+sns.barplot(x=top_countries.index, y=top_countries.values, palette='plasma')
+plt.title('Top 5 Countries by Number of Purchases')
+plt.xlabel('Country')
+plt.ylabel('Number of Purchases')
+
+# --- Plot 5: Pie Chart for Percentage of Item Category ---
+plt.subplot(2, 3, 5)
+category_counts = df['Category'].value_counts()
+plt.pie(category_counts.to_numpy(), labels=category_counts.index.to_list(), autopct='%1.1f%%', startangle=140, colors=sns.color_palette('pastel'))
+plt.title('Percentage of Purchases by Category')
+plt.ylabel('') # Hide the y-label for pie charts
+
+# Adjust layout and display all plots
+plt.tight_layout()
+plt.show()
+
+print("\nVisualizations have been generated.")
