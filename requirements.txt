@@ -1,1 +1,32 @@
 Flask
+
+
+to test :
+
+
+(Invoke-WebRequest -Uri http://127.0.0.1:5000/api/cheapest-flights `
+  -Method POST `
+  -ContentType "application/json" `
+  -Body '{"from_location": "Delhi", "to_location": "Mumbai", "departure_date": "2025-11-20"}').Content
+
+(Invoke-WebRequest -Uri http://127.0.0.1:5000/api/cheapest-flights `
+  -Method POST `
+  -ContentType "application/json" `
+  -Body '{"from_location": "Delhi", "to_location": "Chennai", "departure_date": "2025-11-20"}').Content
+
+(Invoke-WebRequest -Uri http://127.0.0.1:5000/api/cheapest-flights `
+  -Method POST `
+  -ContentType "application/json" `
+  -Body '{"from_location": "Mumbai", "to_location": "Bangalore", "departure_date": "2025-11-20"}').Content
+
+(Invoke-WebRequest -Uri http://127.0.0.1:5000/api/cheapest-flights `
+  -Method POST `
+  -ContentType "application/json" `
+  -Body '{"from_location": "Goa", "to_location": "Chennai", "departure_date": "2025-11-20"}').Content
+
+(Invoke-WebRequest -Uri http://127.0.0.1:5000/api/cheapest-flights `
+  -Method POST `
+  -ContentType "application/json" `
+  -Body '{"from_location": "delhi", "to_location": "goa", "departure_date": "2025-11-20"}').Content
+
+(Invoke-WebRequest -Uri http://127.0.0.1:5000/api/flight-summary).Content
