@@ -1,0 +1,5 @@
+rich
+requests
+google-search-results
+python-dotenv
+Flask

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Travel Planner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Simple spinner CSS */
+        .spinner {
+            border: 4px solid rgba(0, 0, 0, .1);
+            border-left-color: #4f46e5;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans antialiased">
+
+    <div class="container mx-auto max-w-4xl p-8">
+        
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-indigo-600">🤖 AI Travel Planner</h1>
+            <p class="text-lg text-gray-700 mt-2">Let me handle the planning. Just tell me your needs.</p>
+        </div>
+
+        <div id="step-1-query" class="bg-white p-6 rounded-xl shadow-lg">
+            <label for="query-input" class="block text-lg font-medium text-gray-900">How can I help you plan your trip?</label>
+            <textarea id="query-input" rows="4" class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="e.g., I want to fly from delhi to chennai from 2025-10-29 to 2025-10-31 and will require a suite room..."></textarea>
+            <button id="parse-query-btn" class="mt-4 inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700">
+                <span id="parse-btn-text">Parse My Request</span>
+                <div id="parse-spinner" class="spinner hidden"></div>
+            </button>
+        </div>
+
+        <div id="step-2-confirm" class="bg-white p-6 rounded-xl shadow-lg mt-8 hidden">
+            <h2 class="text-2xl font-semibold text-gray-900">Please confirm your trip details</h2>
+            <p class="text-gray-600 mb-6">I've pre-filled what I understood. Please fill in the rest.</p>
+            
+            <form id="plan-form" class="space-y-6">
+                <div>
+                    <label class="block text-lg font-medium text-gray-900">Services Required</label>
+                    <div class="mt-2 grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <label class="flex items-center space-x-2"><input type="checkbox" id="book_flights" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"> <span>✈️ Flights</span></label>
+                        <label class="flex items-center space-x-2"><input type="checkbox" id="book_hotel" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"> <span>🏨 Hotel</span></label>
+                        <label class="flex items-center space-x-2"><input type="checkbox" id="book_itinerary" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"> <span>🗺️ Itinerary</span></label>
+                        <label class="flex items-center space-x-2"><input type="checkbox" id="book_car" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"> <span>🚗 Car Rental</span></label>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="source_city" class="block text-sm font-medium text-gray-700">Source City</label>
+                        <input type="text" id="source_city" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="e.g., Delhi">
+                    </div>
+                    <div>
+                        <label for="destination_city" class="block text-sm font-medium text-gray-700">Destination City</label>
+                        <input type="text" id="destination_city" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="e.g., Chennai">
+                    </div>
+                    <div>
+                        <label for="check_in_date" class="block text-sm font-medium text-gray-700">Start / Check-in (YYYY-MM-DD)</label>
+                        <input type="text" id="check_in_date" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="2025-10-29">
+                    </div>
+                    <div>
+                        <label for="check_out_date" class="block text-sm font-medium text-gray-700">End / Check-out (YYYY-MM-DD)</label>
+                        <input type="text" id="check_out_date" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="2025-10-31">
+                    </div>
+                    <div>
+                        <label for="num_passengers" class="block text-sm font-medium text-gray-700">Travelers / Guests</label>
+                        <input type="number" id="num_passengers" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="2">
+                    </div>
+                </div>
+
+                <div class="space-y-4 pt-4 border-t">
+                    <details class="space-y-2" open>
+                        <summary class="font-medium text-gray-900 cursor-pointer">🏨 Hotel Details</summary>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pl-4">
+                            <div>
+                                <label for="room_preference" class="block text-sm font-medium text-gray-700">Room Preference</label>
+                                <select id="room_preference" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                                    <option>Single</option>
+                                    <option>Double</option>
+                                    <option>Suite</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="max_budget" class="block text-sm font-medium text-gray-700">Max Budget (per night)</label>
+                                <input type="text" id="max_budget" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="8000">
+                            </div>
+                        </div>
+                    </details>
+                    
+                    <details class="space-y-2" open>
+                        <summary class="font-medium text-gray-900 cursor-pointer">🗺️ Itinerary Details</summary>
+                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pl-4">
+                            <div>
+                                <label for="interests" class="block text-sm font-medium text-gray-700">Interests (comma-separated)</label>
+                                <input type="text" id="interests" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="history, food, nature">
+                            </div>
+                            <div>
+                                <label for="budget" class="block text-sm font-medium text-gray-700">Trip Budget</label>
+                                <select id="budget" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                                    <option>low</option>
+                                    <option selected>medium</option>
+                                    <option>high</option>
+                                </select>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="space-y-2" open>
+                        <summary class="font-medium text-gray-900 cursor-pointer">🚗 Car Rental Details</summary>
+                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pl-4">
+                            <div>
+                                <label for="vehicle_type" class="block text-sm font-medium text-gray-700">Vehicle Type</label>
+                                <select id="vehicle_type" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                                    <option>car</option>
+                                    <option>suv</option>
+                                    <option>bike</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="car_hours" class="block text-sm font-medium text-gray-700">Rental Duration (Hours)</label>
+                                <input type="number" id="car_hours" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="8">
+                            </div>
+                        </div>
+                    </details>
+                </div>
+
+                <div>
+                    <button id="get-plan-btn" type="submit" class="w-full inline-flex items-center justify-center rounded-md border border-transparent bg-green-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-green-700">
+                        <span id="plan-btn-text">🚀 Get My Plan!</span>
+                        <div id="plan-spinner" class="spinner hidden"></div>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div id="step-3-results" class="space-y-8 mt-8 hidden">
+            <h2 class="text-3xl font-bold text-center text-gray-900">Here's Your Trip Plan!</h2>
+            </div>
+
+    </div>
+
+    <script>
+        // --- Get all our DOM elements ---
+        const step1 = document.getElementById('step-1-query');
+        const step2 = document.getElementById('step-2-confirm');
+        const step3 = document.getElementById('step-3-results');
+
+        const queryInput = document.getElementById('query-input');
+        const parseBtn = document.getElementById('parse-query-btn');
+        const parseBtnText = document.getElementById('parse-btn-text');
+        const parseSpinner = document.getElementById('parse-spinner');
+
+        const planForm = document.getElementById('plan-form');
+        const planBtn = document.getElementById('get-plan-btn');
+        const planBtnText = document.getElementById('plan-btn-text');
+        const planSpinner = document.getElementById('plan-spinner');
+        
+        // Form inputs
+        const inputs = {
+            book_flights: document.getElementById('book_flights'),
+            book_hotel: document.getElementById('book_hotel'),
+            book_itinerary: document.getElementById('book_itinerary'),
+            book_car: document.getElementById('book_car'),
+            source_city: document.getElementById('source_city'),
+            destination_city: document.getElementById('destination_city'),
+            check_in_date: document.getElementById('check_in_date'),
+            check_out_date: document.getElementById('check_out_date'),
+            num_passengers: document.getElementById('num_passengers'),
+            room_preference: document.getElementById('room_preference'),
+            max_budget: document.getElementById('max_budget'),
+            interests: document.getElementById('interests'),
+            budget: document.getElementById('budget'),
+            vehicle_type: document.getElementById('vehicle_type'),
+            car_hours: document.getElementById('car_hours')
+        };
+
+        // --- Event Listener for Step 1: Parse Query ---
+        parseBtn.addEventListener('click', async () => {
+            const query = queryInput.value;
+            if (!query) {
+                alert('Please enter your query first.');
+                return;
+            }
+
+            // Show spinner, hide text
+            parseBtnText.classList.add('hidden');
+            parseSpinner.classList.remove('hidden');
+            parseBtn.disabled = true;
+
+            try {
+                const response = await fetch('/api/parse_query', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ query })
+                });
+
+                const data = await response.json();
+                
+                if (data.success) {
+                    // Populate the form with the parsed context
+                    fillForm(data.context);
+                    // Show the confirmation form
+                    step2.classList.remove('hidden');
+                    // Scroll to the form
+                    step2.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    alert('Error parsing query: ' + data.error);
+                }
+            } catch (error) {
+                alert('An error occurred: ' + error.message);
+            } finally {
+                // Hide spinner, show text
+                parseBtnText.classList.remove('hidden');
+                parseSpinner.classList.add('hidden');
+                parseBtn.disabled = false;
+            }
+        });
+
+        // --- Event Listener for Step 2: Get Plan ---
+        planForm.addEventListener('submit', async (e) => {
+            e.preventDefault(); // Prevent default form submission
+
+            // Show spinner, hide text
+            planBtnText.classList.add('hidden');
+            planSpinner.classList.remove('hidden');
+            planBtn.disabled = true;
+
+            // Collect all data from the form
+            const formData = {};
+            for (const key in inputs) {
+                if (inputs[key].type === 'checkbox') {
+                    formData[key] = inputs[key].checked;
+                } else if (inputs[key].type === 'number') {
+                    formData[key] = parseInt(inputs[key].value, 10) || null;
+                } else {
+                    formData[key] = inputs[key].value || '';
+                }
+            }
+
+            try {
+                const response = await fetch('/api/get_plan', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    // Render the final plan
+                    displayResults(data.plan);
+                    // Show the results section
+                    step3.classList.remove('hidden');
+                    // Scroll to the results
+                    step3.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    alert('Error generating plan: ' + data.error);
+                }
+            } catch (error) {
+                alert('An error occurred: ' + error.message);
+            } finally {
+                // Hide spinner, show text
+                planBtnText.classList.remove('hidden');
+                planSpinner.classList.add('hidden');
+                planBtn.disabled = false;
+            }
+        });
+
+        // --- Helper Function to fill the form ---
+        function fillForm(context) {
+            // Checkboxes
+            inputs.book_flights.checked = !!context.source_city || !!context.destination_city;
+            inputs.book_hotel.checked = !!context.city || !!context.check_in_date || !!context.room_preference;
+            inputs.book_itinerary.checked = !!context.city || !!context.interests;
+            inputs.book_car.checked = !!context.city;
+            
+            // Text/Select fields
+            if (context.source_city) inputs.source_city.value = context.source_city;
+            if (context.destination_city) inputs.destination_city.value = context.destination_city;
+            if (context.check_in_date) inputs.check_in_date.value = context.check_in_date;
+            if (context.check_out_date) inputs.check_out_date.value = context.check_out_date;
+            if (context.num_passengers) inputs.num_passengers.value = context.num_passengers;
+            if (context.room_preference) inputs.room_preference.value = context.room_preference;
+        }
+
+        // --- Helper Function to display results ---
+        function displayResults(plan) {
+            step3.innerHTML = '<h2 class="text-3xl font-bold text-center text-gray-900">Here\'s Your Trip Plan!</h2>'; // Clear old results
+            
+            // Render Flights
+            if (plan.flights) {
+                let html = '<div class="bg-white p-6 rounded-xl shadow-lg"> <h3 class="text-2xl font-semibold text-indigo-600 mb-4">✈️ Flight Results</h3>';
+                if (plan.flights.length > 0) {
+                    html += '<ul class="space-y-4">';
+                    plan.flights.forEach(f => {
+                        html += `<li class="border-b pb-4">
+                            <p class="font-semibold text-lg">${f.airline} (${f.flight_number})</p>
+                            <p class="text-gray-700">${f.source} → ${f.destination}</p>
+                            <p class="text-gray-600 text-sm">Departure: ${new Date(f.departure_time).toLocaleString()}</p>
+                            <p class="font-medium text-green-600 mt-1">Price: ₹${f.price}</p>
+                        </li>`;
+                    });
+                    html += '</ul>';
+                } else {
+                    html += '<p class="text-gray-600">No flights found matching your criteria.</p>';
+                }
+                html += '</div>';
+                step3.innerHTML += html;
+            }
+
+            // Render Hotels
+            if (plan.hotel) {
+                let html = '<div class="bg-white p-6 rounded-xl shadow-lg"> <h3 class="text-2xl font-semibold text-indigo-600 mb-4">🏨 Hotel Results</h3>';
+                if (plan.hotel.length > 0) {
+                    html += '<ul class="space-y-4">';
+                    plan.hotel.forEach(h => {
+                        html += `<li class="border-b pb-4">
+                            <p class="font-semibold text-lg">${h.name}</p>
+                            <p class="text-gray-700">⭐ Rating: ${h.rating} / 5.0</p>
+                            <p class="font-medium text-green-600 mt-1">Price: ${h.price}</p>
+                        </li>`;
+                    });
+                    html += '</ul>';
+                } else {
+                    html += '<p class="text-gray-600">No hotels found matching your criteria.</p>';
+                }
+                html += '</div>';
+                step3.innerHTML += html;
+            }
+
+            // Render Itinerary
+            if (plan.itinerary) {
+                let html = '<div class="bg-white p-6 rounded-xl shadow-lg"> <h3 class="text-2xl font-semibold text-indigo-600 mb-4">🗺️ Itinerary Plan</h3>';
+                if (Object.keys(plan.itinerary).length > 0) {
+                    for (const day in plan.itinerary) {
+                        html += `<h4 class="text-lg font-semibold mt-4 mb-2">${day}</h4>`;
+                        html += '<ul class="list-disc list-inside space-y-1">';
+                        plan.itinerary[day].forEach(item => {
+                            html += `<li class="text-gray-700">${item.name} <span class="text-gray-500 text-sm">(${item.address || 'No address'})</span></li>`;
+                        });
+                        html += '</ul>';
+                    }
+                } else {
+                    html += '<p class="text-gray-600">No itinerary could be generated for your interests.</p>';
+                }
+                html += '</div>';
+                step3.innerHTML += html;
+            }
+
+            // Render Car
+            if (plan.car) {
+                let html = '<div class="bg-white p-6 rounded-xl shadow-lg"> <h3 class="text-2xl font-semibold text-indigo-600 mb-4">🚗 Car Rental Results</h3>';
+                if (plan.car.length > 0) {
+                    html += '<div class="overflow-x-auto"><table class="min-w-full divide-y divide-gray-200">';
+                    html += '<thead class="bg-gray-50"><tr><th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Vehicle</th><th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Total Cost</th></tr></thead>';
+                    html += '<tbody class="bg-white divide-y divide-gray-200">';
+                    plan.car.forEach(c => {
+                        html += `<tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${c.name} (${c.id})</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-green-600 font-medium">$${c.total_cost}</td>
+                        </tr>`;
+                    });
+                    html += '</tbody></table></div>';
+                } else {
+                    html += '<p class="text-gray-600">No cars found matching your criteria.</p>';
+                }
+                html += '</div>';
+                step3.innerHTML += html;
+            }
+        }
+
+    </script>
+</body>
+</html>

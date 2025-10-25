@@ -1,0 +1,24 @@
+/Travel_Planner/
+│
+├── server.py           # Your main file to run
+├── requirements.txt      
+├── .env                  # (Your API keys)
+│
+├── templates/            
+│   └── index.html        
+│
+├── app/
+│   ├── __init__.py       # (Empty)
+│   ├── orchestrator.py   
+│   └── utils.py          
+│
+├── agents/
+│   ├── __init__.py       # (Empty)
+│   ├── flight_agent.py     
+│   ├── hotel_agent.py      
+│   ├── itinerary_agent.py  
+│   └── car_agent.py        
+│
+└── data/
+    ├── __init__.py       #(Empty)
+    └── db.py             
