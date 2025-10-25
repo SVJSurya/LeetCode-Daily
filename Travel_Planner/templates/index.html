@@ -244,6 +244,12 @@
                     formData[key] = inputs[key].value || '';
                 }
             }
+            
+            // Add destination_city to car_location if car_location is empty
+            if (formData.book_car && formData.destination_city) {
+                // This is a simple assumption, you might want a separate form field
+                formData.car_location = formData.destination_city;
+            }
 
             try {
                 const response = await fetch('/api/get_plan', {
@@ -278,9 +284,9 @@
         function fillForm(context) {
             // Checkboxes
             inputs.book_flights.checked = !!context.source_city || !!context.destination_city;
-            inputs.book_hotel.checked = !!context.city || !!context.check_in_date || !!context.room_preference;
-            inputs.book_itinerary.checked = !!context.city || !!context.interests;
-            inputs.book_car.checked = !!context.city;
+            inputs.book_hotel.checked = !!context.destination_city || !!context.check_in_date || !!context.room_preference;
+            inputs.book_itinerary.checked = !!context.destination_city || !!context.interests;
+            inputs.book_car.checked = !!context.destination_city;
             
             // Text/Select fields
             if (context.source_city) inputs.source_city.value = context.source_city;
@@ -322,11 +328,15 @@
                 if (plan.hotel.length > 0) {
                     html += '<ul class="space-y-4">';
                     plan.hotel.forEach(h => {
+                        // --- THIS IS THE UPDATED PART ---
                         html += `<li class="border-b pb-4">
-                            <p class="font-semibold text-lg">${h.name}</p>
+                            <a href="${h.link}" target="_blank" rel="noopener noreferrer" class="font-semibold text-lg text-indigo-600 hover:text-indigo-800 hover:underline">
+                                ${h.name}
+                            </a>
                             <p class="text-gray-700">⭐ Rating: ${h.rating} / 5.0</p>
                             <p class="font-medium text-green-600 mt-1">Price: ${h.price}</p>
                         </li>`;
+                        // --- END OF UPDATE ---
                     });
                     html += '</ul>';
                 } else {
@@ -339,7 +349,9 @@
             // Render Itinerary
             if (plan.itinerary) {
                 let html = '<div class="bg-white p-6 rounded-xl shadow-lg"> <h3 class="text-2xl font-semibold text-indigo-600 mb-4">🗺️ Itinerary Plan</h3>';
-                if (Object.keys(plan.itinerary).length > 0) {
+                if (plan.itinerary.error) {
+                    html += `<p class="text-gray-600">${plan.itinerary.error}</p>`;
+                } else if (Object.keys(plan.itinerary).length > 0) {
                     for (const day in plan.itinerary) {
                         html += `<h4 class="text-lg font-semibold mt-4 mb-2">${day}</h4>`;
                         html += '<ul class="list-disc list-inside space-y-1">';
