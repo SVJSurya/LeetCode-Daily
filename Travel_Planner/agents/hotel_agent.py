@@ -2,6 +2,7 @@ import os
 import json
 from serpapi.google_search import GoogleSearch
 from dotenv import load_dotenv
+from urllib.parse import quote_plus  # <-- NEW IMPORT
 
 def find_hotels(inputs):
     """
@@ -36,14 +37,25 @@ def find_hotels(inputs):
         hotel_results = []
         if "properties" in results and results["properties"]:
             for hotel in results["properties"][:5]: # Limit to 5
+                
+                # --- NEW LOGIC FOR LINKS ---
+                name = hotel.get("name", "No Name")
+                link = hotel.get("link")  # Get the link from API
+
+                # If no link, create a Google search link
+                if not link:
+                    link = f"https://www.google.com/search?q={quote_plus(name)}"
+                # --- END OF NEW LOGIC ---
+                
                 price = "N/A"
                 if "rate_per_night" in hotel and "extracted_lowest" in hotel["rate_per_night"]:
                     price = f"{hotel['rate_per_night']['extracted_lowest']} INR (per night)"
                 
                 hotel_results.append({
-                    "name": hotel.get("name", "No Name"),
+                    "name": name,
                     "price": price,
-                    "rating": hotel.get("overall_rating", 0.0)
+                    "rating": hotel.get("overall_rating", 0.0),
+                    "link": link  # <-- ADDED LINK TO RESULT
                 })
             return hotel_results
         else:
@@ -55,18 +67,17 @@ def find_hotels(inputs):
 def plan_hotel(context):
     """
     Agent function: Takes full context, returns hotel results.
+    (This function is unchanged)
     """
-    # Build the inputs dict for the API
     api_inputs = {
-        "city": context.get('destination_city'), # Use destination city
+        "city": context.get('destination_city'),
         "check_in_date": context.get('check_in_date'),
         "check_out_date": context.get('check_out_date'),
-        "num_guests": context.get('num_passengers'), # Use num_passengers
+        "num_guests": context.get('num_passengers'),
         "room_preference": context.get('room_preference', 'Single'),
-        "max_budget": context.get('max_budget', '100000') # Default high
+        "max_budget": context.get('max_budget', '100000')
     }
     
-    # Check for required fields
     if not all([api_inputs['city'], api_inputs['check_in_date'], api_inputs['check_out_date']]):
         print("Hotel Agent: Missing required data (city, dates).")
         return []
