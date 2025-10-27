@@ -1,53 +1,37 @@
-# Import the mock DB from its new location
+from fastapi import FastAPI
+from pydantic import BaseModel
 from data.db import VEHICLE_DATABASE 
+import random # Used for mock total cost calculation if hours aren't provided
 
-class VehicleFinderAgent:
-    """
-    The agent responsible for finding and filtering vehicles.
-    This is refactored to return data, not print.
-    """
-    def __init__(self, database):
-        self.vehicle_db = database
-        print("Car Agent: Vehicle Finder initialized.")
+app = FastAPI()
 
-    def find_vehicles(self, location, vehicle_type, num_people, hours):
-        print(f"Car Agent: Searching DB for {vehicle_type} in {location}...")
-        results = []
-        for vehicle in self.vehicle_db:
-            if (
-                vehicle["location"].lower() == location.lower() and
-                vehicle["type"].lower() == vehicle_type.lower() and
-                vehicle["capacity"] >= num_people and
-                vehicle["available"]
-            ):
-                total_cost = vehicle["price_per_hour"] * hours
-                results.append({
-                    "id": vehicle["id"],
-                    "name": vehicle["name"],
-                    "capacity": vehicle["capacity"],
-                    "price_per_hour": vehicle['price_per_hour'],
-                    "total_cost": total_cost
-                })
-        
-        return results
+class CarRequest(BaseModel):
+    city: str
+    rental_date: str
+    vehicle_type: str | None = None # <-- ADDED optional
+    duration_hours: int | None = None # <-- ADDED optional
 
-def plan_car(context):
-    """
-    Agent function: Takes full context, returns car rental results.
-    """
-    location = context.get('destination_city')
-    vehicle_type = context.get('vehicle_type', 'car')
-    num_people = context.get('num_passengers', 1)
-    hours = context.get('car_hours', 8) # Default 8 hours
-    
-    if not all([location, vehicle_type, num_people, hours]):
-        print("Car Agent: Missing required data.")
-        return []
+@app.post("/search_cars")
+def search_cars_endpoint(request: CarRequest):
+    print(f"Car Agent received request: {request.model_dump()}") # Log received data
+    # Use provided duration or default to 48 hours
+    hours = request.duration_hours if request.duration_hours else 48
+    results = []
+    for vehicle in VEHICLE_DATABASE:
+        type_match = True
+        if request.vehicle_type and vehicle["type"].lower() != request.vehicle_type.lower():
+            type_match = False
 
-    agent = VehicleFinderAgent(database=VEHICLE_DATABASE)
-    return agent.find_vehicles(
-        location=location,
-        vehicle_type=vehicle_type,
-        num_people=num_people,
-        hours=hours
-    )
+        if (
+            vehicle["location"].lower() == request.city.lower() and
+            vehicle["available"] and type_match
+        ):
+            total_cost = vehicle["price_per_hour"] * hours
+            results.append({
+                "name": vehicle["name"], "type": vehicle["type"],
+                "capacity": vehicle["capacity"],
+                "daily_rate": vehicle['price_per_hour'] * 24,
+                "total_cost_for_trip": total_cost # Example total cost
+            })
+
+    return {"status": "success", "results": results}

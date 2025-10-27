@@ -1,85 +1,60 @@
 import os
 import json
-from serpapi.google_search import GoogleSearch
+# Remove serpapi import if only using mock data
+# from serpapi.google_search import GoogleSearch
 from dotenv import load_dotenv
-from urllib.parse import quote_plus  # <-- NEW IMPORT
+from urllib.parse import quote_plus # Needed for creating search links
+from fastapi import FastAPI
+from pydantic import BaseModel
 
-def find_hotels(inputs):
-    """
-    Searches for hotels using the SerpApi. Returns a list of results.
-    """
-    load_dotenv()
-    api_key = os.environ.get("SERPAPI_API_KEY")
+load_dotenv()
+app = FastAPI()
 
-    if not api_key:
-        print("ERROR: SERPAPI_API_KEY not found in .env file.")
-        return []
+class HotelRequest(BaseModel):
+    city: str
+    check_in: str
+    check_out: str
+    budget: str | None = None
+    room_preference: str | None = None
 
-    print(f"Hotel Agent: Searching for hotels in {inputs['city']}...")
-    params = {
-        "api_key": api_key,
-        "engine": "google_hotels",
-        "q": f"{inputs['room_preference']} hotels in {inputs['city']}",
-        "check_in_date": inputs["check_in_date"],
-        "check_out_date": inputs["check_out_date"],
-        "adults": inputs["num_guests"],
-        "max_price": inputs["max_budget"],
-        "currency": "INR", "gl": "in", "hl": "en",
-    }
-    try:
-        search = GoogleSearch(params)
-        results = search.get_dict()
+@app.post("/search_hotels")
+def search_hotels_endpoint(request: HotelRequest):
+    print(f"Hotel Agent received request: {request.model_dump()}") # Log received data
 
-        if "error" in results:
-            print(f"Hotel Agent Error: {results['error']}")
-            return []
-        
-        hotel_results = []
-        if "properties" in results and results["properties"]:
-            for hotel in results["properties"][:5]: # Limit to 5
-                
-                # --- NEW LOGIC FOR LINKS ---
-                name = hotel.get("name", "No Name")
-                link = hotel.get("link")  # Get the link from API
+    # --- Your actual logic using SerpApi or another provider would go here ---
+    # Example: filter results based on request.budget / request.room_preference
 
-                # If no link, create a Google search link
-                if not link:
-                    link = f"https://www.google.com/search?q={quote_plus(name)}"
-                # --- END OF NEW LOGIC ---
-                
-                price = "N/A"
-                if "rate_per_night" in hotel and "extracted_lowest" in hotel["rate_per_night"]:
-                    price = f"{hotel['rate_per_night']['extracted_lowest']} INR (per night)"
-                
-                hotel_results.append({
-                    "name": name,
-                    "price": price,
-                    "rating": hotel.get("overall_rating", 0.0),
-                    "link": link  # <-- ADDED LINK TO RESULT
-                })
-            return hotel_results
-        else:
-            return []
-    except Exception as e:
-        print(f"Hotel Agent Error: {e}")
-        return []
+    # --- Updated Mock Results with Dynamic Google Link ---
+    mock_hotel_data = [
+        {"name": "Seaside Resort Mock", "rating": 4.8, "price_per_night": 9000},
+        {"name": "City Center Budget Hotel", "rating": 3.5, "price_per_night": 3500},
+        {"name": "Luxury Palace Mock", "rating": 5.0, "price_per_night": 25000}
+    ]
 
-def plan_hotel(context):
-    """
-    Agent function: Takes full context, returns hotel results.
-    (This function is unchanged)
-    """
-    api_inputs = {
-        "city": context.get('destination_city'),
-        "check_in_date": context.get('check_in_date'),
-        "check_out_date": context.get('check_out_date'),
-        "num_guests": context.get('num_passengers'),
-        "room_preference": context.get('room_preference', 'Single'),
-        "max_budget": context.get('max_budget', '100000')
-    }
-    
-    if not all([api_inputs['city'], api_inputs['check_in_date'], api_inputs['check_out_date']]):
-        print("Hotel Agent: Missing required data (city, dates).")
-        return []
+    processed_results = []
+    for hotel in mock_hotel_data:
+        # Generate Google Search link
+        search_query = f"{hotel['name']} {request.city}"
+        google_link = f"https://www.google.com/search?q={quote_plus(search_query)}"
 
-    return find_hotels(api_inputs)
+        processed_results.append({
+            "name": hotel["name"],
+            "rating": hotel["rating"],
+            "price_per_night": hotel["price_per_night"],
+            "link": google_link # Add the generated link
+        })
+
+    # Optional: Basic filtering based on mock budget (example)
+    if request.budget == 'budget':
+        processed_results = [h for h in processed_results if h['price_per_night'] < 5000]
+    elif request.budget == 'luxury':
+         processed_results = [h for h in processed_results if h['price_per_night'] > 15000]
+    elif request.budget == 'mid-range':
+         processed_results = [h for h in processed_results if 5000 <= h['price_per_night'] <= 15000]
+    # (Add similar logic for room_preference if needed for mock)
+
+
+    if not processed_results:
+        return {"status": "success", "results": []} # Return success but empty if filters remove all
+
+    return {"status": "success", "results": processed_results[:3]} # Return top 3 matching results

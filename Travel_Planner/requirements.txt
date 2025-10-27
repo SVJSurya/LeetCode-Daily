@@ -1,5 +1,4 @@
-rich
-requests
-google-search-results
-python-dotenv
 Flask
+requests
+python-dotenv
+google-generativeai  
