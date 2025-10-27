@@ -1,0 +1,2 @@
+The hotels links not being shown , even when prompted,
+itinerary api not covering anything other than food
