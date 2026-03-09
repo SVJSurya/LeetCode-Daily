@@ -266,6 +266,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2145-grid-game](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2145-grid-game) |
 | [2249-count-the-hidden-sequences](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2249-count-the-hidden-sequences) |
 | [2394-count-subarrays-with-score-less-than-k](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2394-count-subarrays-with-score-less-than-k) |
+| [3129-find-all-possible-stable-binary-arrays-i](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3129-find-all-possible-stable-binary-arrays-i) |
 | [3475-minimum-operations-to-make-binary-array-elements-equal-to-one-i](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3475-minimum-operations-to-make-binary-array-elements-equal-to-one-i) |
 | [3591-shift-distance-between-two-strings](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3591-shift-distance-between-two-strings) |
 ## Two Pointers
@@ -474,6 +475,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2267-minimum-difference-in-sums-after-removal-of-elements](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2267-minimum-difference-in-sums-after-removal-of-elements) |
 | [2395-longest-binary-subsequence-less-than-or-equal-to-k](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2395-longest-binary-subsequence-less-than-or-equal-to-k) |
 | [2710-minimum-operations-to-reduce-an-integer-to-0](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2710-minimum-operations-to-reduce-an-integer-to-0) |
+| [3129-find-all-possible-stable-binary-arrays-i](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3129-find-all-possible-stable-binary-arrays-i) |
 | [3307-find-the-maximum-sum-of-node-values](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3307-find-the-maximum-sum-of-node-values) |
 | [3629-total-characters-in-string-after-transformations-i](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3629-total-characters-in-string-after-transformations-i) |
 | [3630-total-characters-in-string-after-transformations-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3630-total-characters-in-string-after-transformations-ii) |
