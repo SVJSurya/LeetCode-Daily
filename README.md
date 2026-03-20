@@ -722,4 +722,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0146-lru-cache](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0146-lru-cache) |
+## Database
+|  |
+| ------- |
+| [0602-friend-requests-ii-who-has-the-most-friends](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0602-friend-requests-ii-who-has-the-most-friends) |
 <!---LeetCode Topics End-->
