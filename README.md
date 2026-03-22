@@ -311,6 +311,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2237-longest-palindrome-by-concatenating-two-letter-words](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2237-longest-palindrome-by-concatenating-two-letter-words) |
 | [2395-longest-binary-subsequence-less-than-or-equal-to-k](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2395-longest-binary-subsequence-less-than-or-equal-to-k) |
 | [2456-construct-smallest-number-from-di-string](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2456-construct-smallest-number-from-di-string) |
+| [2457-minimum-addition-to-make-integer-beautiful](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2457-minimum-addition-to-make-integer-beautiful) |
 | [2520-using-a-robot-to-print-the-lexicographically-smallest-string](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2520-using-a-robot-to-print-the-lexicographically-smallest-string) |
 | [2689-rearranging-fruits](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2689-rearranging-fruits) |
 | [2704-maximum-difference-by-remapping-a-digit](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2704-maximum-difference-by-remapping-a-digit) |
@@ -613,6 +614,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2202-sum-of-k-mirror-numbers](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2202-sum-of-k-mirror-numbers) |
 | [2206-detonate-the-maximum-bombs](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2206-detonate-the-maximum-bombs) |
 | [2448-count-number-of-bad-pairs](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2448-count-number-of-bad-pairs) |
+| [2457-minimum-addition-to-make-integer-beautiful](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2457-minimum-addition-to-make-integer-beautiful) |
 | [2704-maximum-difference-by-remapping-a-digit](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2704-maximum-difference-by-remapping-a-digit) |
 | [2998-count-symmetric-integers](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2998-count-symmetric-integers) |
 | [3172-divisible-and-non-divisible-sums-difference](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3172-divisible-and-non-divisible-sums-difference) |
