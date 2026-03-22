@@ -48,6 +48,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0945-snakes-and-ladders](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0945-snakes-and-ladders) |
 | [1022-unique-paths-iii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1022-unique-paths-iii) |
 | [1039-find-the-town-judge](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1039-find-the-town-judge) |
+| [1125-smallest-sufficient-team](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1125-smallest-sufficient-team) |
 | [1227-number-of-equivalent-domino-pairs](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1227-number-of-equivalent-domino-pairs) |
 | [1293-three-consecutive-odds](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1293-three-consecutive-odds) |
 | [1335-maximum-candies-allocated-to-k-children](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1335-maximum-candies-allocated-to-k-children) |
@@ -129,6 +130,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0287-find-the-duplicate-number](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0287-find-the-duplicate-number) |
 | [0389-find-the-difference](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0389-find-the-difference) |
 | [1022-unique-paths-iii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1022-unique-paths-iii) |
+| [1125-smallest-sufficient-team](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1125-smallest-sufficient-team) |
 | [2308-divide-array-into-equal-pairs](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2308-divide-array-into-equal-pairs) |
 | [2478-longest-nice-subarray](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2478-longest-nice-subarray) |
 | [2710-minimum-operations-to-reduce-an-integer-to-0](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2710-minimum-operations-to-reduce-an-integer-to-0) |
@@ -475,6 +477,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0787-sliding-puzzle](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0787-sliding-puzzle) |
 | [0806-domino-and-tromino-tiling](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0806-domino-and-tromino-tiling) |
 | [1086-divisor-game](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1086-divisor-game) |
+| [1125-smallest-sufficient-team](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1125-smallest-sufficient-team) |
 | [1170-shortest-common-supersequence](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1170-shortest-common-supersequence) |
 | [1236-n-th-tribonacci-number](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1236-n-th-tribonacci-number) |
 | [1250-longest-common-subsequence](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1250-longest-common-subsequence) |
@@ -733,4 +736,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0602-friend-requests-ii-who-has-the-most-friends](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0602-friend-requests-ii-who-has-the-most-friends) |
+## Bitmask
+|  |
+| ------- |
+| [1125-smallest-sufficient-team](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1125-smallest-sufficient-team) |
 <!---LeetCode Topics End-->
