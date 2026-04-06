@@ -438,6 +438,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0392-is-subsequence](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0392-is-subsequence) |
 | [0402-remove-k-digits](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0402-remove-k-digits) |
 | [0412-fizz-buzz](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0412-fizz-buzz) |
+| [0415-add-strings](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0415-add-strings) |
 | [0451-sort-characters-by-frequency](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0451-sort-characters-by-frequency) |
 | [0556-next-greater-element-iii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0556-next-greater-element-iii) |
 | [0812-rotate-string](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0812-rotate-string) |
@@ -621,6 +622,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0171-excel-sheet-column-number](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0171-excel-sheet-column-number) |
 | [0368-largest-divisible-subset](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0368-largest-divisible-subset) |
 | [0412-fizz-buzz](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0412-fizz-buzz) |
+| [0415-add-strings](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0415-add-strings) |
 | [0556-next-greater-element-iii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0556-next-greater-element-iii) |
 | [0797-rabbits-in-forest](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0797-rabbits-in-forest) |
 | [0957-prison-cells-after-n-days](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0957-prison-cells-after-n-days) |
@@ -645,6 +647,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0412-fizz-buzz](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0412-fizz-buzz) |
+| [0415-add-strings](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0415-add-strings) |
 | [1545-find-kth-bit-in-nth-binary-string](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1545-find-kth-bit-in-nth-binary-string) |
 | [2021-remove-all-occurrences-of-a-substring](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2021-remove-all-occurrences-of-a-substring) |
 | [2048-build-array-from-permutation](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2048-build-array-from-permutation) |
