@@ -132,6 +132,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0222-count-complete-tree-nodes](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0222-count-complete-tree-nodes) |
 | [0287-find-the-duplicate-number](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0287-find-the-duplicate-number) |
 | [0389-find-the-difference](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0389-find-the-difference) |
+| [0405-convert-a-number-to-hexadecimal](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0405-convert-a-number-to-hexadecimal) |
 | [0957-prison-cells-after-n-days](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0957-prison-cells-after-n-days) |
 | [1022-unique-paths-iii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1022-unique-paths-iii) |
 | [1125-smallest-sufficient-team](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1125-smallest-sufficient-team) |
@@ -437,6 +438,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0389-find-the-difference](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0389-find-the-difference) |
 | [0392-is-subsequence](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0392-is-subsequence) |
 | [0402-remove-k-digits](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0402-remove-k-digits) |
+| [0405-convert-a-number-to-hexadecimal](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0405-convert-a-number-to-hexadecimal) |
 | [0412-fizz-buzz](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0412-fizz-buzz) |
 | [0415-add-strings](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0415-add-strings) |
 | [0451-sort-characters-by-frequency](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0451-sort-characters-by-frequency) |
@@ -621,6 +623,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0096-unique-binary-search-trees](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0096-unique-binary-search-trees) |
 | [0171-excel-sheet-column-number](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0171-excel-sheet-column-number) |
 | [0368-largest-divisible-subset](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0368-largest-divisible-subset) |
+| [0405-convert-a-number-to-hexadecimal](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0405-convert-a-number-to-hexadecimal) |
 | [0412-fizz-buzz](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0412-fizz-buzz) |
 | [0415-add-strings](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0415-add-strings) |
 | [0556-next-greater-element-iii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0556-next-greater-element-iii) |
