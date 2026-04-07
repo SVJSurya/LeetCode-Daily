@@ -651,6 +651,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1545-find-kth-bit-in-nth-binary-string](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1545-find-kth-bit-in-nth-binary-string) |
 | [2021-remove-all-occurrences-of-a-substring](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2021-remove-all-occurrences-of-a-substring) |
 | [2048-build-array-from-permutation](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2048-build-array-from-permutation) |
+| [2069-walking-robot-simulation-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2069-walking-robot-simulation-ii) |
 | [2260-divide-a-string-into-groups-of-size-k](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2260-divide-a-string-into-groups-of-size-k) |
 | [2265-partition-array-according-to-given-pivot](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2265-partition-array-according-to-given-pivot) |
 | [2551-apply-operations-to-an-array](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2551-apply-operations-to-an-array) |
@@ -662,6 +663,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0146-lru-cache](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0146-lru-cache) |
 | [0225-implement-stack-using-queues](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0225-implement-stack-using-queues) |
+| [2069-walking-robot-simulation-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2069-walking-robot-simulation-ii) |
 | [2434-design-a-number-container-system](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2434-design-a-number-container-system) |
 ## Ordered Set
 |  |
