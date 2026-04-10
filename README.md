@@ -39,6 +39,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0416-partition-equal-subset-sum](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0416-partition-equal-subset-sum) |
 | [0417-pacific-atlantic-water-flow](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0417-pacific-atlantic-water-flow) |
 | [0463-island-perimeter](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0463-island-perimeter) |
+| [0495-teemo-attacking](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0495-teemo-attacking) |
 | [0542-01-matrix](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0542-01-matrix) |
 | [0560-subarray-sum-equals-k](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0560-subarray-sum-equals-k) |
 | [0695-max-area-of-island](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0695-max-area-of-island) |
@@ -657,6 +658,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0412-fizz-buzz](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0412-fizz-buzz) |
 | [0415-add-strings](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0415-add-strings) |
+| [0495-teemo-attacking](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0495-teemo-attacking) |
 | [1545-find-kth-bit-in-nth-binary-string](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1545-find-kth-bit-in-nth-binary-string) |
 | [2021-remove-all-occurrences-of-a-substring](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2021-remove-all-occurrences-of-a-substring) |
 | [2048-build-array-from-permutation](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2048-build-array-from-permutation) |
