@@ -631,6 +631,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0405-convert-a-number-to-hexadecimal](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0405-convert-a-number-to-hexadecimal) |
 | [0412-fizz-buzz](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0412-fizz-buzz) |
 | [0415-add-strings](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0415-add-strings) |
+| [0492-construct-the-rectangle](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0492-construct-the-rectangle) |
 | [0556-next-greater-element-iii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0556-next-greater-element-iii) |
 | [0797-rabbits-in-forest](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0797-rabbits-in-forest) |
 | [0957-prison-cells-after-n-days](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0957-prison-cells-after-n-days) |
