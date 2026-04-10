@@ -133,6 +133,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0287-find-the-duplicate-number](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0287-find-the-duplicate-number) |
 | [0389-find-the-difference](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0389-find-the-difference) |
 | [0405-convert-a-number-to-hexadecimal](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0405-convert-a-number-to-hexadecimal) |
+| [0461-hamming-distance](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0461-hamming-distance) |
 | [0957-prison-cells-after-n-days](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0957-prison-cells-after-n-days) |
 | [1022-unique-paths-iii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1022-unique-paths-iii) |
 | [1125-smallest-sufficient-team](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1125-smallest-sufficient-team) |
