@@ -448,6 +448,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0412-fizz-buzz](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0412-fizz-buzz) |
 | [0415-add-strings](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0415-add-strings) |
 | [0451-sort-characters-by-frequency](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0451-sort-characters-by-frequency) |
+| [0504-base-7](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0504-base-7) |
 | [0556-next-greater-element-iii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0556-next-greater-element-iii) |
 | [0812-rotate-string](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0812-rotate-string) |
 | [1170-shortest-common-supersequence](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1170-shortest-common-supersequence) |
@@ -633,6 +634,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0412-fizz-buzz](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0412-fizz-buzz) |
 | [0415-add-strings](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0415-add-strings) |
 | [0492-construct-the-rectangle](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0492-construct-the-rectangle) |
+| [0504-base-7](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0504-base-7) |
 | [0556-next-greater-element-iii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0556-next-greater-element-iii) |
 | [0797-rabbits-in-forest](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0797-rabbits-in-forest) |
 | [0957-prison-cells-after-n-days](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0957-prison-cells-after-n-days) |
