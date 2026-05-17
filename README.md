@@ -636,6 +636,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0492-construct-the-rectangle](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0492-construct-the-rectangle) |
 | [0504-base-7](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0504-base-7) |
 | [0556-next-greater-element-iii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0556-next-greater-element-iii) |
+| [0728-self-dividing-numbers](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0728-self-dividing-numbers) |
 | [0797-rabbits-in-forest](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0797-rabbits-in-forest) |
 | [0957-prison-cells-after-n-days](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0957-prison-cells-after-n-days) |
 | [1086-divisor-game](https://github.com/SVJSurya/LeetCode-Daily/tree/master/1086-divisor-game) |
