@@ -1,0 +1,114 @@
+Here is the comprehensive, FAANG-inspired handover document and master prompt you can provide directly to your coding assistant to build this system.
+
+1. Final Aim & Expected Output
+
+The Final Aim: To build a secure, chatbot-like interface and agentic AI model that answers user queries based on EDA (Electronic Design Automation) output results stored on a RHEL VM. The system acts as a dynamic "librarian" that can navigate directories and extract specific data points.
+
+
+The Expected Output: A fully functional, decoupled architecture featuring a vanilla JavaScript chat interface that communicates via a REST API to a Python Flask backend. The backend will use LangChain and a corporate JedAI LLM endpoint to intelligently route user queries to pure Python, read-only data extraction tools.
+
+2. System End-to-End Principles & Design Constraints
+Before writing any code, the AI assistant must understand these immutable rules:
+
+
+Zero Shell Execution: The agent is strictly prohibited from executing OS-level commands (e.g., free -g, grep, awk).
+
+
+Pure Python Read-Only: All data retrieval must be done using pure Python file I/O operations operating strictly in read-only mode.
+
+
+Corporate Data Privacy: No public or commercial AI endpoints (like standard OpenAI) may be used. The AI orchestration must route exclusively through the internal, OpenAI-compatible JedAI API.
+
+Stateless JSON Transport: The system must not dump massive files into the LLM context window. The API will perform the targeted extraction and return concise JSON payloads for the LLM to synthesize. The data must be "forgotten" immediately after the response is generated.
+
+
+Native Execution Environment: The code will run natively on a RHEL VM accessed via a VS Code Remote-SSH connection from a Windows machine.
+
+3. The Master Copilot Prompt
+Copy and paste the text block below directly into GitHub Copilot or your designated AI assistant to generate the entire codebase step-by-step.
+
+System Role: You are an expert Principal Software Engineer. Your task is to build a secure, read-only Agentic RAG system for an EDA (Electronic Design Automation) environment. The environment runs on a RHEL VM, accessed via VS Code Remote-SSH.
+
+Core Constraints:
+
+You must use Flask for the backend API and Vanilla HTML/JS/CSS for the frontend.
+
+You must use LangChain with the ChatOpenAI wrapper to connect to a custom corporate endpoint (JedAI).
+
+ABSOLUTELY NO OS shell command execution (no subprocess, os.system, etc.). All tools provided to the LangChain agent must be pure Python read-only file parsers.
+
+You must implement a directory traversal security check to prevent the API from reading files outside a defined base workspace.
+
+File Structure to Generate:
+
+Plaintext
+eda-agent-workspace/
+├── backend/
+│   ├── .env                 
+│   ├── requirements.txt     
+│   ├── agent_tools.py       
+│   ├── agent_core.py        
+│   └── app.py               
+└── frontend/
+    └── index.html           
+Implementation Steps (Generate the code for each):
+
+Step 1: backend/requirements.txt & backend/.env
+
+requirements.txt: Include Flask, flask-cors, python-dotenv, langchain, and langchain-openai.
+
+.env: Include mock variables for JEDAI_API_KEY, JEDAI_BASE_URL, and EDA_WORKSPACE_DIR.
+
+Step 2: backend/agent_tools.py
+
+Import os, Path from pathlib, and @tool from langchain.tools.
+
+Read EDA_WORKSPACE_DIR from the environment.
+
+Create a tool list_available_parts that accepts a run directory path and dynamically returns a list of subdirectories.
+
+Create a tool extract_setup_slack that accepts a part name, safely opens run.log in that part's directory using pure Python, and searches for the string "Setup slack", returning the exact line. Wrap this in a try-except block.
+
+Step 3: backend/agent_core.py
+
+Load environment variables.
+
+Initialize ChatOpenAI using the JEDAI_BASE_URL and JEDAI_API_KEY. Set temperature=0.
+
+Initialize a LangChain ReAct agent (ZERO_SHOT_REACT_DESCRIPTION) binding the two tools from Step 2.
+
+Provide a strict system prompt instructing the agent to act as a secure EDA librarian, to never hallucinate metrics, and to only use its provided tools.
+
+Create a query_agent(user_input: str) function to run the agent and handle exceptions.
+
+Step 4: backend/app.py
+
+Initialize a Flask app with CORS enabled.
+
+Create a POST /api/chat route that accepts a JSON payload with a message key.
+
+Pass the message to query_agent and return the string response as JSON: {"response": "..."}.
+
+Step 5: frontend/index.html
+
+Create a single-file Vanilla JS, CSS, and HTML interface.
+
+Include a chat box area and an input field.
+
+Write an async JS function that POSTs the user input to http://localhost:5000/api/chat and appends the user's message and the agent's response to the chat interface.
+
+4. Execution & Validation Strategy
+Once Copilot generates the code based on the prompt above, follow this sequence to validate the system on your RHEL VM:
+
+
+Environment: Ensure you are in your VS Code Remote-SSH Bash terminal. Activate your Python virtual environment.
+
+Mock Data: Create a mock directory structure (e.g., /test_runs/part_0/run.log) and populate the log with a fake setup slack error to act as your test baseline. Point your .env workspace variable to this directory.
+
+Backend Startup: Run python backend/app.py. Ensure it binds to port 5000 successfully.
+
+
+Frontend Test: Open frontend/index.html in your browser. Ask the agent: "What parts are available, and what is the setup slack in part_0?"
+
+
+Verification Check: The agent must successfully trigger the list_available_parts tool, observe the output, immediately trigger the extract_setup_slack tool, and synthesize the final answer without executing a single shell command.
