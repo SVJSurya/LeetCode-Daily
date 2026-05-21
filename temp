@@ -108,6 +108,67 @@ Mock Data: Create a mock directory structure (e.g., /test_runs/part_0/run.log) a
 Backend Startup: Run python backend/app.py. Ensure it binds to port 5000 successfully.
 
 
+
+
+-------------------------------------------------------------------------------------------------------
+
+
+es, absolutely. Using LangChain for a lightweight validation test is the smartest way to verify your network connection and credentials before introducing the complexity of the agentic ReAct loop or the EDA tools.
+
+Because we designed the architecture to use the OpenAI-compatible ChatOpenAI wrapper to connect to your corporate JedAI endpoint, you can write a tiny, standalone Python script to send a basic prompt. This will instantly confirm if the variables you set up in your .env file (JEDAI_API_KEY and JEDAI_BASE_URL) are being authenticated correctly by your organization's servers.
+
+Here is the exact strategy and code to validate your API.
+
+1. The Validation Script
+Create a new, temporary file in your backend folder named test_jedai.py. Paste the following code into it. This script isolates LangChain's invocation method to ensure the core connection works.
+
+Python
+import os
+from dotenv import load_dotenv
+from langchain_openai import ChatOpenAI
+
+# Load your corporate credentials from the .env file
+load_dotenv()
+
+print("Initiating connection to JedAI API...")
+
+try:
+    # Initialize the model exactly as we will in the main agent
+    llm = ChatOpenAI(
+        model="gpt-4o", # IMPORTANT: Replace with the exact model string JedAI requires
+        api_key=os.getenv("JEDAI_API_KEY"),
+        base_url=os.getenv("JEDAI_BASE_URL"),
+        max_tokens=15, # Keep it small for a fast response
+        temperature=0
+    )
+
+    # Send a stateless ping to the API
+    print("Sending test prompt...")
+    response = llm.invoke("Respond with exactly these words: 'JedAI API is connected and working.'")
+    
+    print("\n--- VALIDATION SUCCESS ---")
+    print(f"JedAI Response: {response.content}")
+
+except Exception as e:
+    print("\n--- VALIDATION FAILED ---")
+    print(f"Error details: {str(e)}")
+    print("Check your .env file, VPN/network connection, and model name.")
+2. Execution & Interpretation
+In your VS Code Remote-SSH Bash terminal, ensure your virtual environment is activated, then run:
+
+Bash
+python test_jedai.py
+How to read the results:
+
+Success: The script will output "JedAI API is connected and working." This mathematically proves your LangChain setup, API keys, and corporate network firewall rules are perfectly configured. You are cleared to proceed with the main build.
+
+AuthenticationError (HTTP 401): Your JEDAI_API_KEY is invalid, expired, or not copied correctly into the .env file.
+
+NotFoundError (HTTP 404): Your JEDAI_BASE_URL is pointing to the wrong endpoint, or the model="gpt-4o" string does not exist on your internal servers. You will need to check your internal JedAI documentation for the exact base URL and model ID strings.
+
+ConnectionError / Timeout: The RHEL VM does not have network access to the JedAI endpoint. You may need to configure corporate proxy settings in your environment variables (e.g., HTTP_PROXY).
+
+
 Frontend Test: Open frontend/index.html in your browser. Ask the agent: "What parts are available, and what is the setup slack in part_0?"
 
 
