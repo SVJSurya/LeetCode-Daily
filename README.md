@@ -114,6 +114,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [3483-alternating-groups-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3483-alternating-groups-ii) |
 | [3591-shift-distance-between-two-strings](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3591-shift-distance-between-two-strings) |
 | [3627-find-minimum-time-to-reach-last-room-i](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3627-find-minimum-time-to-reach-last-room-i) |
+| [3633-earliest-finish-time-for-land-and-water-rides-i](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3633-earliest-finish-time-for-land-and-water-rides-i) |
 | [3643-flip-square-submatrix-vertically](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3643-flip-square-submatrix-vertically) |
 | [3790-fruits-into-baskets-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3790-fruits-into-baskets-ii) |
 ## Backtracking
@@ -312,6 +313,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2265-partition-array-according-to-given-pivot](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2265-partition-array-according-to-given-pivot) |
 | [2551-apply-operations-to-an-array](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2551-apply-operations-to-an-array) |
 | [2917-count-pairs-whose-sum-is-less-than-target](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2917-count-pairs-whose-sum-is-less-than-target) |
+| [3633-earliest-finish-time-for-land-and-water-rides-i](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3633-earliest-finish-time-for-land-and-water-rides-i) |
 | [3643-flip-square-submatrix-vertically](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3643-flip-square-submatrix-vertically) |
 | [3683-find-the-lexicographically-largest-string-from-the-box-i](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3683-find-the-lexicographically-largest-string-from-the-box-i) |
 ## Greedy
@@ -337,6 +339,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2710-minimum-operations-to-reduce-an-integer-to-0](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2710-minimum-operations-to-reduce-an-integer-to-0) |
 | [3171-minimum-equal-sum-of-two-arrays-after-replacing-zeros](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3171-minimum-equal-sum-of-two-arrays-after-replacing-zeros) |
 | [3307-find-the-maximum-sum-of-node-values](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3307-find-the-maximum-sum-of-node-values) |
+| [3633-earliest-finish-time-for-land-and-water-rides-i](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3633-earliest-finish-time-for-land-and-water-rides-i) |
 ## Depth-First Search
 |  |
 | ------- |
@@ -430,6 +433,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [3219-make-lexicographically-smallest-array-by-swapping-elements](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3219-make-lexicographically-smallest-array-by-swapping-elements) |
 | [3307-find-the-maximum-sum-of-node-values](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3307-find-the-maximum-sum-of-node-values) |
 | [3430-count-days-without-meetings](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3430-count-days-without-meetings) |
+| [3633-earliest-finish-time-for-land-and-water-rides-i](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3633-earliest-finish-time-for-land-and-water-rides-i) |
 ## String
 |  |
 | ------- |
@@ -612,6 +616,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2614-maximum-count-of-positive-integer-and-negative-integer](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2614-maximum-count-of-positive-integer-and-negative-integer) |
 | [2665-minimum-time-to-repair-cars](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2665-minimum-time-to-repair-cars) |
 | [2917-count-pairs-whose-sum-is-less-than-target](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2917-count-pairs-whose-sum-is-less-than-target) |
+| [3633-earliest-finish-time-for-land-and-water-rides-i](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3633-earliest-finish-time-for-land-and-water-rides-i) |
 | [3790-fruits-into-baskets-ii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/3790-fruits-into-baskets-ii) |
 ## Binary Tree
 |  |
