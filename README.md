@@ -311,6 +311,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0287-find-the-duplicate-number](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0287-find-the-duplicate-number) |
 | [0392-is-subsequence](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0392-is-subsequence) |
 | [0556-next-greater-element-iii](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0556-next-greater-element-iii) |
+| [2095-delete-the-middle-node-of-a-linked-list](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2095-delete-the-middle-node-of-a-linked-list) |
 | [2265-partition-array-according-to-given-pivot](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2265-partition-array-according-to-given-pivot) |
 | [2551-apply-operations-to-an-array](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2551-apply-operations-to-an-array) |
 | [2917-count-pairs-whose-sum-is-less-than-target](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2917-count-pairs-whose-sum-is-less-than-target) |
@@ -584,6 +585,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0203-remove-linked-list-elements](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0203-remove-linked-list-elements) |
 | [0206-reverse-linked-list](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0206-reverse-linked-list) |
 | [0234-palindrome-linked-list](https://github.com/SVJSurya/LeetCode-Daily/tree/master/0234-palindrome-linked-list) |
+| [2095-delete-the-middle-node-of-a-linked-list](https://github.com/SVJSurya/LeetCode-Daily/tree/master/2095-delete-the-middle-node-of-a-linked-list) |
 ## Tree
 |  |
 | ------- |
